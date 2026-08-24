@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF0CA"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#997A15"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer Gold Crest Circle -->
+  <circle cx="50" cy="50" r="46" fill="url(#goldGrad)" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#050608" stroke-width="1.5" stroke-dasharray="4 2"/>
+  
+  <!-- Crown Icon Top Accent -->
+  <path d="M42 30 L45 23 L50 27 L55 23 L58 30 Z" fill="#050608"/>
+  
+  <!-- AG Initials Typography -->
+  <text x="50" y="66" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="34" font-weight="800" fill="#050608" text-anchor="middle" letter-spacing="-1">AG</text>
+</svg>
