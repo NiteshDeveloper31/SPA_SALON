@@ -6,13 +6,9 @@
   <title>Skincare & Medi-Facials — AURA & GOLD Luxury Salon</title>
   <meta name="description" content="Experience 24K Saffron gold facials, Hydra-glow medi-facials, and Rica organic waxing designed for Indian skin tones.">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -21,141 +17,158 @@
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
+        <div class="logo-badge">AG</div>
         <div class="logo-text-wrap">
           <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
         </div>
       </a>
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
           <div class="dropdown-menu">
-            <a href="services.html">All Treatments</a>
-            <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skin & Medi-Facials</a>
-            <a href="spa-wellness.html">Spa & Wellness</a>
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="bridal-makeup.html" class="nav-link">Bridal</a>
-        <a href="stylists.html" class="nav-link">Experts</a>
+        <a href="stylists.html" class="nav-link">Stylists</a>
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="offers.html" class="nav-link">Offers</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="testimonials.html" class="nav-link">Reviews</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="phone-quick">
-          <i class="fa-solid fa-phone text-gold"></i>
-          <span>+91 98765 43210</span>
-        </a>
-        <a href="booking.html" class="btn btn-gold btn-sm">Book Slot</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
+        </div>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="services.html" class="drawer-link">All Services Menu</a>
+        <a href="hair-services.html" class="drawer-link">Hair Studio & Balayage</a>
+        <a href="beauty-skin.html" class="drawer-link active">Beauty & Skincare</a>
+        <a href="spa-wellness.html" class="drawer-link">Spa & Wellness</a>
+        <a href="bridal-makeup.html" class="drawer-link">Bridal Studio</a>
+        <a href="stylists.html" class="drawer-link">Our Master Stylists</a>
+        <a href="packages.html" class="drawer-link">Curated Packages</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
+    </div>
+    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+  </div>
   <div class="backdrop-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
-        <div class="logo-text-wrap">
-          <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
-        </div>
-      </a>
-      <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="drawer-links">
-      <a href="index.html" class="drawer-link">Home <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="about.html" class="drawer-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="hair-services.html" class="drawer-link">Hair Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="beauty-skin.html" class="drawer-link active">Skin & Medi-Facials <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="spa-wellness.html" class="drawer-link">Spa & Wellness <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="bridal-makeup.html" class="drawer-link">Bridal Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="stylists.html" class="drawer-link">Our Experts <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="packages.html" class="drawer-link">Luxury Packages <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="offers.html" class="drawer-link">Offers <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="gallery.html" class="drawer-link">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="testimonials.html" class="drawer-link">Reviews <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="booking.html" class="drawer-link">Book Appointment <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </aside>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80" alt="Facial Skincare Room" class="page-header-bg">
-    <div class="container page-header-content">
-      <span class="section-tag">ADVANCED CLINICAL DERMA CARE</span>
-      <h1 class="section-title">Medi-Facials & Radiant Skincare</h1>
-      <p class="section-subtitle" style="margin: 0 auto;">Combining clinical dermatological technology with pure Ayurvedic botanical elixirs.</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Skincare</span>
+        <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Beauty & Skin</span>
+      </div>
+      <h1 class="page-hero-title">Clinical Skincare & Medi-Facials</h1>
+      <p class="page-hero-desc">Customized dermal care, 24K saffron infusions, hydra-dermabrasion, and organic Rica waxing formulated for Indian complexions.</p>
+    </div>
+  </section>
+
+  <!-- 1. Skin Philosophy -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="feature-split">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Facial Skincare Consultation">
+        </div>
+        <div class="feature-content">
+          <span class="section-tag">DERMAL CARE</span>
+          <h2>Targeted Solutions for Indian Skin Complexions</h2>
+          <p>Indian skin tones often experience hyper-pigmentation, uneven sun tan, urban pollution congestion, and barrier sensitivity. Our dermal therapists combine botanical Ayurvedic extracts with medical-grade oxygen infusion.</p>
+          <div class="feature-list">
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Hyperpigmentation Care:</strong> Natural kojic and saffron extracts to fade dark spots.</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Deep Pore Extraction:</strong> Painless vacuum vortex extractions for blackheads and sebum.</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Medi-Facials Grid -->
-  <section class="section section-dark">
+  <!-- 2. Facials Grid -->
+  <section class="section section-warm">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">ROYAL RADIANCE</span>
-        <h2 class="section-title">Signature Medi-Facials</h2>
+      <div class="section-header">
+        <span class="section-tag">SKINCARE MENU</span>
+        <h2 class="section-title">Facials & Medi-Treatments</h2>
+        <p class="section-subtitle">Dermatologically tested facial treatments formulated for maximum radiance and hydration.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Card 1 -->
-        <div class="card reveal reveal-delay-1">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80" alt="Saffron Gold Facial Indian Model" data-placeholder="INDIAN_SAFFRON_FACIAL_MODEL">
-            <span class="card-badge">BRIDAL FAVOURITE</span>
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="24K Saffron Gold Facial">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Kumkumadi 24K Saffron Facial</h3>
-            <p class="card-desc">Kashmiri saffron, 24K edible gold leaves, and lotus stem extract massage to instantly erase dullness and pigmentation.</p>
+            <span class="card-category">GOLD INFUSION</span>
+            <h3 class="card-title">24K Saffron Kumkumadi Facial</h3>
+            <p class="card-desc">Edible 24K gold leaves with wild saffron oil to eliminate tan and restore bridal glow.</p>
             <div class="card-footer">
-              <span class="card-price">₹4,499</span>
-              <a href="booking.html?service=Saffron%20Facial" class="btn btn-gold btn-sm">Book Treatment</a>
+              <div>
+                <span class="card-price">₹4,499</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">75 mins</span>
+              </div>
+              <a href="booking.html?service=saffron-facial" class="btn btn-gold btn-sm">Book Facial</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Hydra Facial Indian Model" data-placeholder="INDIAN_HYDRA_FACIAL_MODEL">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Hydra Dermabrasion Facial">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Hydra-Dermabrasion Infusion</h3>
-            <p class="card-desc">Pore vacuum extraction, glycolic exfoliation, and hyaluronic acid oxygen jet for a glass-skin dewy finish.</p>
+            <span class="card-category">MEDI-FACIAL</span>
+            <h3 class="card-title">Hydra-Dermabrasion Oxygen Facial</h3>
+            <p class="card-desc">Vacuum extraction, glycolic peel, and hyaluronic acid oxygen jet for immediate skin plumpness.</p>
             <div class="card-footer">
-              <span class="card-price">₹3,999</span>
-              <a href="booking.html?service=Hydra%20Facial" class="btn btn-gold btn-sm">Book Treatment</a>
+              <div>
+                <span class="card-price">₹3,999</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">60 mins</span>
+              </div>
+              <a href="booking.html?service=hydra-facial" class="btn btn-gold btn-sm">Book Facial</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=600&q=80" alt="Diamond Facial Indian Model" data-placeholder="INDIAN_DIAMOND_FACIAL_MODEL">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Micro-Diamond Anti-Aging Treatment">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Micro-Diamond Microdermabrasion</h3>
-            <p class="card-desc">Diamond-tip microdermabrasion with collagen mask for firming sagging skin and smoothing fine lines.</p>
+            <span class="card-category">ANTI-AGING</span>
+            <h3 class="card-title">Micro-Diamond Rejuvenation</h3>
+            <p class="card-desc">Diamond-tip microdermabrasion stimulating collagen synthesis and reducing fine smile lines.</p>
             <div class="card-footer">
-              <span class="card-price">₹4,999</span>
-              <a href="booking.html?service=Diamond%20Facial" class="btn btn-gold btn-sm">Book Treatment</a>
+              <div>
+                <span class="card-price">₹4,999</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">75 mins</span>
+              </div>
+              <a href="booking.html?service=diamond-facial" class="btn btn-gold btn-sm">Book Facial</a>
             </div>
           </div>
         </div>
@@ -163,113 +176,73 @@
     </div>
   </section>
 
-  <!-- Section: Waxing & Smooth Body Rituals -->
-  <section class="section section-elevated">
+  <!-- Skincare FAQs -->
+  <section class="section section-light">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">SMOOTH SKIN CARE</span>
-        <h2 class="section-title">Organic Rica Liposoluble Waxing</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Painless, anti-tan wax formulated with Italian Argan oil and avocado butter.</p>
+      <div class="section-header">
+        <span class="section-tag">SKINCARE FAQs</span>
+        <h2 class="section-title">Frequently Asked Skin Questions</h2>
       </div>
 
-      <div class="grid-3">
-        <div class="card reveal reveal-delay-1" style="padding: 2rem;">
-          <h3 style="font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 0.75rem;">Full Body Rica Waxing</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Includes full arms, full legs, underarms, and stomach/back wax with soothing post-wax oil.</p>
-          <div class="card-footer">
-            <span class="card-price">₹2,200</span>
-            <a href="booking.html?service=Full%20Body%20Wax" class="btn btn-gold btn-sm">Book Slot</a>
+      <div class="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header">How many days before an event should I get a facial? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>We recommend scheduling your signature facial 3 to 4 days prior to your event or wedding function to allow active botanical ingredients to settle for maximum glow.</p>
           </div>
         </div>
 
-        <div class="card reveal reveal-delay-2" style="padding: 2rem;">
-          <h3 style="font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 0.75rem;">Arms & Legs Rica Waxing</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Gentle hair removal for sensitive skin types, reducing in-grown hair significantly.</p>
-          <div class="card-footer">
-            <span class="card-price">₹1,200</span>
-            <a href="booking.html?service=Arms%20Legs%20Wax" class="btn btn-gold btn-sm">Book Slot</a>
-          </div>
-        </div>
-
-        <div class="card reveal reveal-delay-3" style="padding: 2rem;">
-          <h3 style="font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 0.75rem;">Hygienic Bikini Waxing</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">100% disposable strip-less peel-off wax performed in private soundproof treatment rooms.</p>
-          <div class="card-footer">
-            <span class="card-price">₹1,500</span>
-            <a href="booking.html?service=Bikini%20Wax" class="btn btn-gold btn-sm">Book Slot</a>
+        <div class="accordion-item">
+          <button class="accordion-header">Is Hydra-Dermabrasion painful? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Not at all. Hydra-Dermabrasion uses a gentle vortex suction tip with soothing liquid serums. It feels like a cool liquid massage on the face.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Threading & Face Studio Table -->
-  <section class="section section-dark">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">PRECISION EXPRESS</span>
-        <h2 class="section-title">Face Threading & Tinting Menu</h2>
-      </div>
-
-      <div style="max-width: 700px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;" class="reveal">
-        <div style="display: flex; justify-content: space-between; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <span>Eyebrow Threading & Shaping</span>
-          <strong style="color: var(--gold-primary);">₹150</strong>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <span>Upper Lip & Chin Threading</span>
-          <strong style="color: var(--gold-primary);">₹100</strong>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <span>Full Face Threading Studio</span>
-          <strong style="color: var(--gold-primary);">₹450</strong>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <span>Henna Eyebrow Tinting & Definition</span>
-          <strong style="color: var(--gold-primary);">₹600</strong>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 0.85rem 0;">
-          <span>Eyelash Tinting & Lift</span>
-          <strong style="color: var(--gold-primary);">₹1,200</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Global Corporate Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">AG</div>
-            <div>AURA & GOLD <span class="logo-sub">Royal Salon & Spa</span></div>
-          </a>
-          <p>India's leading skincare & luxury salon sanctuary.</p>
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
+          </div>
+          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
         </div>
         <div class="footer-col">
-          <h4>Menu</h4>
+          <h4>Navigation</h4>
           <div class="footer-links">
-            <a href="hair-services.html">Hair Couture</a>
-            <a href="beauty-skin.html">Skincare</a>
-            <a href="spa-wellness.html">Wellness Spa</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="stylists.html">Master Stylists</a>
+            <a href="packages.html">Packages</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Links</h4>
+          <h4>Specialties</h4>
           <div class="footer-links">
-            <a href="stylists.html">Stylists</a>
-            <a href="packages.html">Packages</a>
-            <a href="booking.html">Book Appointment</a>
+            <a href="hair-services.html">Hair Studio</a>
+            <a href="beauty-skin.html">Skincare</a>
+            <a href="spa-wellness.html">Ayurvedic Spa</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
-          <p>+91 98765 43210</p>
+          <div class="footer-links">
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AURA & GOLD Luxury Salons & Spa Pvt Ltd.</p>
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>
     </div>
   </footer>

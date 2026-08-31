@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details — AURA & GOLD Luxury Salon & Spa</title>
+  <meta name="description" content="Detailed treatment guide, pricing, duration, inclusions, process steps, aftercare, and online booking for AURA & GOLD services.">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Mobile Sticky CTA Bar */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+      padding: 0.85rem 1.25rem;
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 768px) {
+      .mobile-sticky-bar { display: flex; }
+      body { padding-bottom: 70px; }
+    }
+    .badge-status {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .bg-green { background: #E8F5E9; color: #2E7D32; }
+    .bg-gold { background: #FFF8E1; color: #B08A45; }
+    .bg-red { background: #FFEBEE; color: #C62828; }
+  </style>
+</head>
+<body>
+
+  <!-- Global Header Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">AG</div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">AURA & GOLD</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
+          </div>
+        </div>
+        <a href="stylists.html" class="nav-link">Stylists</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
+        </div>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="services.html" class="drawer-link active">All Services Menu</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
+    </div>
+    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+  </div>
+  <div class="backdrop-overlay"></div>
+
+  <!-- 1. SERVICE HERO -->
+  <section class="hero" style="padding-top: calc(var(--header-height) + 3rem); padding-bottom: 4rem;">
+    <div class="container">
+      <div class="breadcrumb" style="justify-content: flex-start; margin-bottom: 1.5rem;">
+        <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span id="heroBreadcrumb">Service Details</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-tag" id="heroCategory">HAIR STUDIO & COLOR</span>
+          <h1 class="hero-title" id="heroTitle" style="font-size: 3.2rem;">French Caramel Balayage</h1>
+          <p class="hero-desc" id="heroTagline">Hand-painted dimensional highlights customized to your natural hair color, skin tone, and desired finish.</p>
+
+          <div class="service-hero-price-card">
+            <div>
+              <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">STARTING PRICE</span>
+              <div id="heroPrice" style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--text-primary); line-height: 1.1;">₹8,499</div>
+            </div>
+            <div style="border-left: 1px solid var(--border-color); padding-left: 1.5rem;">
+              <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">ESTIMATED DURATION</span>
+              <div id="heroDuration" style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: var(--accent-gold);">150 mins</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="booking.html" id="heroBookBtn" class="btn btn-primary btn-lg">Book This Service</a>
+            <a href="tel:+919876543210" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> Call Salon</a>
+          </div>
+        </div>
+
+        <div class="hero-img-wrap">
+          <img id="heroImage" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80" alt="Service Detail View">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. QUICK SERVICE INFORMATION STRIP -->
+  <section class="section section-light" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="grid-4" style="gap: 1.25rem;">
+        <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid var(--border-color);"><i class="fa-solid fa-user-check"></i></div>
+          <div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">SPECIALIST</span>
+            <strong id="quickSpecialist" style="display: block; font-size: 0.92rem;">Hair Color Specialist</strong>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid var(--border-color);"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">MAINTENANCE</span>
+            <strong id="quickMaintenance" style="display: block; font-size: 0.92rem;">8–12 weeks</strong>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid var(--border-color);"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">RECOMMENDED FOR</span>
+            <strong id="quickRecommended" style="display: block; font-size: 0.92rem;">Medium to long hair</strong>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid var(--border-color);"><i class="fa-solid fa-clipboard-check"></i></div>
+          <div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">CONSULTATION</span>
+            <strong id="quickConsultation" style="display: block; font-size: 0.92rem;">Included Free</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT THIS SERVICE & 4. WHAT'S INCLUDED -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="feature-split">
+        <div class="feature-content">
+          <span class="section-tag">DEEP DIVE</span>
+          <h2 id="aboutTitle" style="font-family: var(--font-serif); font-size: 2.4rem; margin-bottom: 1rem;">About French Caramel Balayage</h2>
+          <div id="aboutContent" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 1rem; color: var(--text-primary);"><i class="fa-solid fa-circle-check text-gold"></i> What's Included in Your Session</h3>
+            <div id="includedList" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.92rem; color: var(--text-primary);">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature-img-wrap" style="margin-bottom: 1.5rem;">
+            <img id="aboutImage" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="About Treatment Process">
+          </div>
+
+          <!-- 6. WHAT YOU CAN EXPECT -->
+          <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 1rem; color: var(--text-primary);"><i class="fa-solid fa-sparkles text-gold"></i> What You Can Expect</h3>
+            <div id="expectList" style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--text-secondary);">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. THE PROCESS (STEP-BY-STEP) -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">STEP-BY-STEP JOURNEY</span>
+        <h2 class="section-title">The Treatment Process</h2>
+        <p class="section-subtitle">How our master specialists execute every step of your appointment.</p>
+      </div>
+
+      <div class="grid-3" id="processGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BEFORE & AFTER SHOWCASE -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">REAL RESULTS</span>
+        <h2 class="section-title">Before & After Transformation</h2>
+        <p class="section-subtitle">Authentic client results photographed in our salon lighting.</p>
+      </div>
+
+      <div class="grid-2" style="max-width: 900px; margin: 0 auto; gap: 1.5rem;">
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; text-align: center;">
+          <img id="beforeImg" src="" alt="Before Treatment" style="width: 100%; height: 360px; object-fit: cover;">
+          <div style="padding: 1rem; font-weight: 600; font-size: 0.9rem; color: var(--text-muted);" id="beforeLabel">Natural Dark Base</div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; text-align: center;">
+          <img id="afterImg" src="" alt="After Treatment" style="width: 100%; height: 360px; object-fit: cover;">
+          <div style="padding: 1rem; font-weight: 600; font-size: 0.9rem; color: var(--accent-gold);" id="afterLabel">After Caramel Balayage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. WHO IS THIS FOR & 9. SUITABILITY -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="grid-2">
+        <div style="background: var(--bg-main); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);"><i class="fa-solid fa-circle-check text-gold"></i> Ideal For You If...</h3>
+          <div id="idealList" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 2rem;">
+            <!-- Rendered by JS -->
+          </div>
+
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);"><i class="fa-solid fa-circle-xmark text-gold"></i> May Not Be Ideal If...</h3>
+          <div id="notIdealList" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.92rem; color: var(--text-secondary);">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1.25rem; color: var(--text-primary);"><i class="fa-solid fa-sliders text-gold"></i> Hair & Skin Compatibility</h3>
+          <div id="compatibilityList" style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. AFTERCARE & 12. OPTIONAL ADD-ONS -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="grid-2">
+        <!-- 10. Aftercare -->
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+          <span class="section-tag">LONGEVITY & CARE</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 1rem;">Maintenance & Home Aftercare</h3>
+          <div id="aftercareBox" style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- 12. Optional Add-ons -->
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+          <span class="section-tag">CUSTOMIZE YOUR SESSION</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 1rem;">Optional Recommended Add-Ons</h3>
+          <div id="addonsList" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+            <!-- Rendered by JS -->
+          </div>
+          <div style="padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">Estimated Session Total:</span>
+            <span id="addonCalculatedTotal" style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--text-primary);">₹8,499</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. SERVICE FAQs -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TREATMENT FAQs</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="accordion" id="serviceFaqAccordion">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. REVIEWS & 16. GALLERY -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CLIENT FEEDBACK & PHOTOS</span>
+        <h2 class="section-title">Reviews & Gallery Showcase</h2>
+      </div>
+
+      <div class="grid-2" style="gap: 2rem; margin-bottom: 3rem;" id="serviceReviewsGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="grid-4" id="serviceGalleryGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. RELATED SERVICES -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COMPLEMENTARY TREATMENTS</span>
+        <h2 class="section-title">Related Services</h2>
+      </div>
+
+      <div class="grid-3" id="relatedServicesGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 17. FINAL BOOKING CTA BANNER -->
+  <section class="section section-dark" style="text-align: center; padding: 4.5rem 0;">
+    <div class="container" style="max-width: 680px;">
+      <h2 style="font-family: var(--font-serif); font-size: 2.6rem; color: #FFFFFF; margin-bottom: 0.75rem;">Ready for Your New Look?</h2>
+      <p style="color: var(--text-light-muted); margin-bottom: 2rem;">Book your appointment online in under 2 minutes. Receive instant confirmation.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="booking.html" id="finalBookBtn" class="btn btn-gold btn-lg">Book This Service</a>
+        <a href="tel:+919876543210" class="btn btn-outline btn-lg" style="color: #FFF; border-color: rgba(255,255,255,0.3);">Call Salon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky CTA Bar -->
+  <div class="mobile-sticky-bar">
+    <div>
+      <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">STARTING PRICE</span>
+      <div id="stickyMobilePrice" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">₹8,499</div>
+    </div>
+    <a href="booking.html" id="stickyMobileBtn" class="btn btn-gold btn-sm">Book This Service</a>
+  </div>
+
+  <!-- Global Corporate Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
+          </div>
+          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="stylists.html">Master Stylists</a>
+            <a href="packages.html">Packages</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <div class="footer-links">
+            <a href="hair-services.html">Hair Studio</a>
+            <a href="beauty-skin.html">Skincare</a>
+            <a href="spa-wellness.html">Ayurvedic Spa</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/services-data.js"></script>
+  <script src="js/service-details.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -6,13 +6,9 @@
   <title>About Us — AURA & GOLD Luxury Indian Salon & Spa</title>
   <meta name="description" content="Discover the legacy of AURA & GOLD - India's leading luxury salon chain providing hair transformations, Ayurvedic skincare and HD bridal makeup since 2012.">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -21,305 +17,238 @@
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
+        <div class="logo-badge">AG</div>
         <div class="logo-text-wrap">
           <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
         </div>
       </a>
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="about.html" class="nav-link active">About</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="nav-link">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+          <a href="services.html" class="nav-link">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
           <div class="dropdown-menu">
-            <a href="services.html">All Treatments</a>
-            <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skin & Medi-Facials</a>
-            <a href="spa-wellness.html">Spa & Wellness</a>
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="bridal-makeup.html" class="nav-link">Bridal</a>
-        <a href="stylists.html" class="nav-link">Experts</a>
+        <a href="stylists.html" class="nav-link">Stylists</a>
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="offers.html" class="nav-link">Offers</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="testimonials.html" class="nav-link">Reviews</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="phone-quick">
-          <i class="fa-solid fa-phone text-gold"></i>
-          <span>+91 98765 43210</span>
-        </a>
-        <a href="booking.html" class="btn btn-gold btn-sm">Book Slot</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="backdrop-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
-        <div class="logo-text-wrap">
-          <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
         </div>
-      </a>
-      <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link active">About Us</a>
+        <a href="services.html" class="drawer-link">All Services Menu</a>
+        <a href="hair-services.html" class="drawer-link">Hair Studio & Balayage</a>
+        <a href="beauty-skin.html" class="drawer-link">Beauty & Skincare</a>
+        <a href="spa-wellness.html" class="drawer-link">Spa & Wellness</a>
+        <a href="bridal-makeup.html" class="drawer-link">Bridal Studio</a>
+        <a href="stylists.html" class="drawer-link">Our Master Stylists</a>
+        <a href="packages.html" class="drawer-link">Curated Packages</a>
+        <a href="offers.html" class="drawer-link">Promotions & Offers</a>
+        <a href="gallery.html" class="drawer-link">Visual Gallery</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
     </div>
-    <div class="drawer-links">
-      <a href="index.html" class="drawer-link">Home <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="about.html" class="drawer-link active">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="hair-services.html" class="drawer-link">Hair Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="beauty-skin.html" class="drawer-link">Skin & Medi-Facials <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="spa-wellness.html" class="drawer-link">Spa & Wellness <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="bridal-makeup.html" class="drawer-link">Bridal Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="stylists.html" class="drawer-link">Our Experts <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="packages.html" class="drawer-link">Luxury Packages <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="offers.html" class="drawer-link">Offers <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="gallery.html" class="drawer-link">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="testimonials.html" class="drawer-link">Reviews <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="booking.html" class="drawer-link">Book Appointment <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </aside>
+    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+  </div>
+  <div class="backdrop-overlay"></div>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=80" alt="Salon Luxury Interior" class="page-header-bg">
-    <div class="container page-header-content">
-      <span class="section-tag">OUR HERITAGE & VISION</span>
-      <h1 class="section-title">The Story of AURA & GOLD</h1>
-      <p class="section-subtitle" style="margin: 0 auto;">Pioneering luxury Indian salon and spa hospitality through ancient wisdom and contemporary styling.</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
       <div class="breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <span>About Us</span>
       </div>
+      <h1 class="page-hero-title">Redefining Luxury Beauty Care in India</h1>
+      <p class="page-hero-desc">Discover our story of blending European cosmetic science with rich Indian heritage since 2012 across Mumbai, Delhi, Bengaluru, and Hyderabad.</p>
     </div>
   </section>
 
-  <!-- Brand Legacy Section -->
-  <section class="section section-dark">
+  <!-- 1. Our Story -->
+  <section class="section section-light">
     <div class="container">
-      <div class="grid-2" style="align-items: center;">
-        <div class="reveal">
-          <span class="section-tag">ESTABLISHED 2012</span>
-          <h2 class="section-title">Crafting Royal Indian Pampering Experiences</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
-            Founded in Mumbai's prestigious Bandra neighborhood in 2012, <strong>AURA & GOLD</strong> was conceived with a single ambitious vision: to create an Indian salon experience that stands shoulder-to-shoulder with global luxury spa hotels while celebrating Indian beauty tradition.
-          </p>
-          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
-            We recognized that Indian hair textures, skin melanin profiles, and grand wedding traditions required specialized care. Rather than applying generic Western salon templates, we created proprietary treatments combining London & Paris hair coloring techniques with authentic Kashmiri Saffron, Kumkumadi oils, and pure Kerala Ayurveda.
-          </p>
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-            Today, across 12 flagship sanctuaries in Mumbai, Bengaluru, New Delhi, and Hyderabad, our 28+ master artists have served over 15,000 brides and 100,000+ salon guests.
-          </p>
+      <div class="feature-split">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="AURA & GOLD Flagship Salon Architecture">
         </div>
-
-        <div class="reveal reveal-delay-2">
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-gold-glow); box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="AURA & GOLD Luxury Salon Interior" data-placeholder="LUXURY_SALON_INTERIOR">
-          </div>
+        <div class="feature-content">
+          <span class="section-tag">OUR ORIGINS</span>
+          <h2>A Heritage Founded on Craftsmanship</h2>
+          <p>Established in 2012 in Bandra West, Mumbai, AURA & GOLD was conceived to solve a critical gap in the Indian salon industry: bringing international styling standards and clinical hygiene to urban professionals without sacrificing warm Indian hospitality.</p>
+          <p>Over the past 14 years, our brand has expanded into four flagship sanctuaries, employing over 120 certified hair directors, dermal therapists, and bridal artists.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Four Pillars of Excellence -->
-  <section class="section section-elevated">
+  <!-- 2. Core Values -->
+  <section class="section section-warm">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">UNCOMPROMISING BENCHMARKS</span>
-        <h2 class="section-title">Our Four Pillars of Excellence</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Why Indian salon clients trust us for their most important moments.</p>
+      <div class="section-header">
+        <span class="section-tag">GUIDING PRINCIPLES</span>
+        <h2 class="section-title">The Four Pillars of AURA & GOLD</h2>
+        <p class="section-subtitle">Every service, product choice, and client interaction is guided by our core values.</p>
       </div>
 
       <div class="grid-4">
-        <!-- Pillar 1 -->
-        <div class="card reveal reveal-delay-1" style="padding: 2rem;">
-          <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-size: 1.5rem; margin-bottom: 1.25rem;">
-            <i class="fa-solid fa-pump-medical"></i>
-          </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">1. Medical-Grade Hygiene</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Autoclave sterilizers, disposable single-use capes & towels, and hospital-grade sanitization protocols for every guest.</p>
+        <div class="card" style="padding: 2rem; border-color: var(--border-color);">
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Authentic Artistry</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">We never compromise on technique. Every stylist completes 200+ hours of annual advanced training.</p>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="card reveal reveal-delay-2" style="padding: 2rem;">
-          <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-size: 1.5rem; margin-bottom: 1.25rem;">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">2. Internationally Certified</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">All our hair directors & skin therapists hold certifications from Vidal Sassoon, L'Oréal Académie Paris, and Kerala Ayurvedic Institutes.</p>
+        <div class="card" style="padding: 2rem; border-color: var(--border-color);">
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Clinical Hygiene</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Hospital-grade UV autoclaves, single-use capes, and daily room sanitization protocols.</p>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="card reveal reveal-delay-3" style="padding: 2rem;">
-          <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-size: 1.5rem; margin-bottom: 1.25rem;">
-            <i class="fa-solid fa-gem"></i>
-          </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">3. Private VIP Suites</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Dedicated soundproof bridal and celebrity suites offering total privacy, personal vanity lighting, and private dressing room access.</p>
+        <div class="card" style="padding: 2rem; border-color: var(--border-color);">
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Organic Formulations</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">100% genuine ammonia-free hair colors, dermatologically tested facials, and Kerala oils.</p>
         </div>
 
-        <!-- Pillar 4 -->
-        <div class="card reveal reveal-delay-4" style="padding: 2rem;">
-          <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-size: 1.5rem; margin-bottom: 1.25rem;">
-            <i class="fa-solid fa-leaf"></i>
-          </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">4. Pure Botanical Formulas</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Sulphate-free, paraben-free, cruelty-free imported hair products combined with 100% cold-pressed organic Ayurvedic herbal oils.</p>
+        <div class="card" style="padding: 2rem; border-color: var(--border-color);">
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Personalized Care</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">No rushed appointments. Every service starts with a private 15-minute consultation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Luxury Amenities Section -->
-  <section class="section section-dark">
+  <!-- 3. Hygiene & Safety Standards -->
+  <section class="section section-light">
     <div class="container">
-      <div class="grid-2" style="align-items: center;">
-        <div class="reveal">
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Luxury Salon Amenities">
-          </div>
+      <div class="feature-split reverse">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Clinical Facial & Hygiene Setup">
         </div>
-
-        <div class="reveal reveal-delay-2">
-          <span class="section-tag">ROYAL HOSPITALITY</span>
-          <h2 class="section-title">Amenities Beyond Expectation</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-            We believe a salon visit should feel like a mini luxury vacation. That's why every AURA & GOLD outlet features complimentary premium perks:
-          </p>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <i class="fa-solid fa-mug-hot text-gold" style="font-size: 1.2rem; margin-top: 0.2rem;"></i>
-              <div>
-                <h4 style="font-size: 1rem; color: var(--text-white);">Artisanal Beverage Lounge</h4>
-                <p style="font-size: 0.88rem; color: var(--text-muted);">Freshly brewed Nespresso, Kashmiri Kahwa tea, fresh cold-pressed juices & sparkling water.</p>
-              </div>
-            </div>
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <i class="fa-solid fa-wifi text-gold" style="font-size: 1.2rem; margin-top: 0.2rem;"></i>
-              <div>
-                <h4 style="font-size: 1rem; color: var(--text-white);">High-Speed Workstation Pods</h4>
-                <p style="font-size: 0.88rem; color: var(--text-muted);">Ergonomic seating with laptop tables and ultra-fast Wi-Fi while your hair color develops.</p>
-              </div>
-            </div>
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <i class="fa-solid fa-car text-gold" style="font-size: 1.2rem; margin-top: 0.2rem;"></i>
-              <div>
-                <h4 style="font-size: 1rem; color: var(--text-white);">Complimentary Valet Parking</h4>
-                <p style="font-size: 0.88rem; color: var(--text-muted);">Hassle-free private valet parking service across all our metro city outlets.</p>
-              </div>
-            </div>
+        <div class="feature-content">
+          <span class="section-tag">SAFETY FIRST</span>
+          <h2>Hospital-Grade Sanitization Standards</h2>
+          <p>Your health and peace of mind are non-negotiable. Every outlet operates under strict clinical sanitization guidelines overseen by our dedicated hygiene director.</p>
+          <div class="feature-list">
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>UV Autoclave Tool Sterilization:</strong> Metal scissors, combs, and tweezers sterilized after every single client.</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Single-Use Client Kits:</strong> Disposable biodegradable capes, towels, and manicure files.</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>HEPA Air Filtration:</strong> Continuous indoor air purification across all facial and spa rooms.</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Timeline / Milestones -->
-  <section class="section section-elevated">
+  <!-- 4. Milestones Timeline -->
+  <section class="section section-warm">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">JOURNEY OF GLORY</span>
-        <h2 class="section-title">Our Growth Milestones</h2>
+      <div class="section-header">
+        <span class="section-tag">OUR JOURNEY</span>
+        <h2 class="section-title">Milestones & Growth</h2>
+        <p class="section-subtitle">A decade of expanding flagship sanctuaries across India's premier metro cities.</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem;">
-        <div class="card reveal reveal-delay-1" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-          <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--gold-primary); min-width: 80px;">2012</div>
-          <div>
-            <h4 style="font-size: 1.1rem; color: var(--text-white);">Bandra Flagship Launch</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary);">Opened our first 3,500 sq ft luxury salon on Waterfield Road, Mumbai.</p>
-          </div>
+      <div class="grid-4">
+        <div style="background-color: var(--bg-surface); padding: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.35rem;">2012</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 0.5rem;">First Sanctuary in Bandra</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Launched flagship boutique salon in Bandra West, Mumbai with a team of 6 stylists.</p>
         </div>
 
-        <div class="card reveal reveal-delay-2" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-          <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--gold-primary); min-width: 80px;">2017</div>
-          <div>
-            <h4 style="font-size: 1.1rem; color: var(--text-white);">Vogue India Beauty Award</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary);">Awarded 'Best Luxury Salon Experience in West India' by Vogue India Magazine.</p>
-          </div>
+        <div style="background-color: var(--bg-surface); padding: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.35rem;">2017</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 0.5rem;">Vogue Beauty Award</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Recognized as 'Best Luxury Hair & Bridal Studio in Western India'.</p>
         </div>
 
-        <div class="card reveal reveal-delay-3" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-          <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--gold-primary); min-width: 80px;">2021</div>
-          <div>
-            <h4 style="font-size: 1.1rem; color: var(--text-white);">Multi-City Expansion</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary);">Expanded flagship outlets to Indiranagar (Bengaluru) & Connaught Place (New Delhi).</p>
-          </div>
+        <div style="background-color: var(--bg-surface); padding: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.35rem;">2021</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 0.5rem;">Metro Expansion</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Opened new flagship sanctuaries in Connaught Place (Delhi) & Indiranagar (Bengaluru).</p>
         </div>
 
-        <div class="card reveal reveal-delay-4" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-          <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--gold-primary); min-width: 80px;">2026</div>
-          <div>
-            <h4 style="font-size: 1.1rem; color: var(--text-white);">15,000+ Happy Brides Milestone</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary);">Crossed the landmark of pampering over 15,000 Indian brides for their dream wedding day.</p>
-          </div>
+        <div style="background-color: var(--bg-surface); padding: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.35rem;">2026</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 0.5rem;">Jubilee Hills Launch</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Unveiled our largest 8,000 sq.ft. bridal and spa suite in Jubilee Hills, Hyderabad.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Banner -->
-  <section class="section section-dark text-center">
-    <div class="container reveal">
-      <h2 class="section-title">Ready to Experience Aura & Gold?</h2>
-      <p class="section-subtitle" style="margin: 0 auto 2rem;">Book your consultation or treatment with our master stylists today.</p>
-      <a href="booking.html" class="btn btn-gold btn-lg">Book Salon Appointment</a>
+  <section class="section section-dark" style="text-align: center; padding: 4.5rem 0;">
+    <div class="container" style="max-width: 680px;">
+      <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: #FFFFFF; margin-bottom: 1rem;">Experience the AURA Standard</h2>
+      <p style="color: var(--text-light-muted); margin-bottom: 2rem;">Book your consultation online or visit any of our flagship sanctuaries in Mumbai, Delhi, Bengaluru, or Hyderabad.</p>
+      <a href="booking.html" class="btn btn-gold btn-lg">Book Your Appointment</a>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Global Corporate Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">AG</div>
-            <div>AURA & GOLD <span class="logo-sub">Royal Salon & Spa</span></div>
-          </a>
-          <p>India's award-winning luxury salon and spa chain.</p>
-          <div class="social-links">
-            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
+          </div>
+          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="stylists.html">Master Stylists</a>
+            <a href="packages.html">Packages</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Explore Menu</h4>
+          <h4>Specialties</h4>
           <div class="footer-links">
-            <a href="hair-services.html">Hair Couture</a>
-            <a href="beauty-skin.html">Medi-Facials</a>
+            <a href="hair-services.html">Balayage & Hair Studio</a>
+            <a href="beauty-skin.html">24K Saffron Facial</a>
             <a href="spa-wellness.html">Ayurvedic Spa</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4>Contact</h4>
           <div class="footer-links">
-            <a href="about.html">About Heritage</a>
-            <a href="stylists.html">Master Stylists</a>
-            <a href="packages.html">Packages</a>
-            <a href="contact.html">Contact Us</a>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
           </div>
-        </div>
-        <div class="footer-col">
-          <h4>Contact & Outlets</h4>
-          <p style="font-size: 0.9rem;">+91 98765 43210</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Mumbai | Bengaluru | Delhi | Hyderabad</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AURA & GOLD Luxury Salons & Spa Pvt Ltd.</p>
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>
     </div>
   </footer>

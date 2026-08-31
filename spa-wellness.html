@@ -6,13 +6,9 @@
   <title>Ayurvedic Spa & Wellness — AURA & GOLD Luxury Spa</title>
   <meta name="description" content="Immerse in royal Ayurvedic Abhyanga massages, hot stone therapies, and couple spa suites in our luxury sanctuaries across Mumbai, Delhi, Bengaluru & Hyderabad.">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -21,153 +17,158 @@
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
+        <div class="logo-badge">AG</div>
         <div class="logo-text-wrap">
           <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
         </div>
       </a>
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
           <div class="dropdown-menu">
-            <a href="services.html">All Treatments</a>
-            <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skin & Medi-Facials</a>
-            <a href="spa-wellness.html">Spa & Wellness</a>
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="bridal-makeup.html" class="nav-link">Bridal</a>
-        <a href="stylists.html" class="nav-link">Experts</a>
+        <a href="stylists.html" class="nav-link">Stylists</a>
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="offers.html" class="nav-link">Offers</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="testimonials.html" class="nav-link">Reviews</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="phone-quick">
-          <i class="fa-solid fa-phone text-gold"></i>
-          <span>+91 98765 43210</span>
-        </a>
-        <a href="booking.html" class="btn btn-gold btn-sm">Book Slot</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="backdrop-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
-        <div class="logo-text-wrap">
-          <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
         </div>
-      </a>
-      <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="services.html" class="drawer-link">All Services Menu</a>
+        <a href="hair-services.html" class="drawer-link">Hair Studio & Balayage</a>
+        <a href="beauty-skin.html" class="drawer-link">Beauty & Skincare</a>
+        <a href="spa-wellness.html" class="drawer-link active">Spa & Wellness</a>
+        <a href="bridal-makeup.html" class="drawer-link">Bridal Studio</a>
+        <a href="stylists.html" class="drawer-link">Our Master Stylists</a>
+        <a href="packages.html" class="drawer-link">Curated Packages</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
     </div>
-    <div class="drawer-links">
-      <a href="index.html" class="drawer-link">Home <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="about.html" class="drawer-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="hair-services.html" class="drawer-link">Hair Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="beauty-skin.html" class="drawer-link">Skin & Medi-Facials <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="spa-wellness.html" class="drawer-link active">Spa & Wellness <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="bridal-makeup.html" class="drawer-link">Bridal Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="stylists.html" class="drawer-link">Our Experts <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="packages.html" class="drawer-link">Luxury Packages <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="offers.html" class="drawer-link">Offers <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="gallery.html" class="drawer-link">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="testimonials.html" class="drawer-link">Reviews <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="booking.html" class="drawer-link">Book Appointment <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </aside>
+    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+  </div>
+  <div class="backdrop-overlay"></div>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80" alt="Spa Wellness Sanctuary" class="page-header-bg">
-    <div class="container page-header-content">
-      <span class="section-tag">ROYAL REJUVENATION</span>
-      <h1 class="section-title">Ayurvedic & Wellness Spa</h1>
-      <p class="section-subtitle" style="margin: 0 auto;">Restore harmony of mind, body, and spirit with our ancient herbal oils and therapeutic massages.</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
       <div class="breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Spa & Wellness</span>
       </div>
+      <h1 class="page-hero-title">Ayurvedic Spa & Wellness Sanctuaries</h1>
+      <p class="page-hero-desc">Restorative body massages, warm herbal oil Abhyanga therapies, and private hydrotherapy couple suites designed for deep stress release.</p>
     </div>
   </section>
 
-  <!-- Massages Showcase -->
-  <section class="section section-dark">
+  <!-- 1. Spa Philosophy -->
+  <section class="section section-light">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">THERAPEUTIC RITUALS</span>
-        <h2 class="section-title">Signature Massage Therapies</h2>
+      <div class="feature-split">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Ayurvedic Massage Therapy Room">
+        </div>
+        <div class="feature-content">
+          <span class="section-tag">HOLISTIC WELLNESS</span>
+          <h2>A Sanctuary of Calm & Rejuvenation</h2>
+          <p>Step away from urban exhaustion. Our spa sanctuaries feature private soundproof rooms with ambient warm lighting, acoustic meditation soundscapes, and certified therapists from Kerala.</p>
+          <div class="feature-list">
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Herbal Oil Mixology:</strong> Medicated Dhanwantharam and Kshirabala oils imported from Kottakkal.</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Private Steam & Jacuzzi:</strong> En-suite hydrotherapy rain showers in every treatment room.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Spa Therapies Grid -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">MASSAGE MENU</span>
+        <h2 class="section-title">Signature Body Therapies</h2>
+        <p class="section-subtitle">Therapeutic massages designed to relieve muscular tension, improve circulation, and restore mental clarity.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Massage 1 -->
-        <div class="card reveal reveal-delay-1">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Abhyanga Massage">
-            <span class="card-badge">AYURVEDIC</span>
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Kerala Abhyanga Warm Oil Massage">
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span><i class="fa-regular fa-clock"></i> 90 Mins</span>
-              <span><i class="fa-solid fa-star text-gold"></i> 5.0 (210)</span>
-            </div>
-            <h3 class="card-title">Royal Abhyanga Warm Oil Massage</h3>
-            <p class="card-desc">Synchronized long rhythmic strokes using warm medicinal Kerala Dhanwantharam oil to flush toxins & boost vitality.</p>
+            <span class="card-category">AYURVEDIC</span>
+            <h3 class="card-title">Kerala Abhyanga Warm Oil Massage</h3>
+            <p class="card-desc">90-minute rhythmic full body massage using warm herbal oils to detoxify tissues and ease joint stiffness.</p>
             <div class="card-footer">
-              <span class="card-price">₹4,999</span>
-              <a href="booking.html?service=Abhyanga" class="btn btn-gold btn-sm">Book Spa</a>
+              <div>
+                <span class="card-price">₹4,999</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">90 mins</span>
+              </div>
+              <a href="booking.html?service=abhyanga" class="btn btn-gold btn-sm">Book Therapy</a>
             </div>
           </div>
         </div>
 
-        <!-- Massage 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Swedish Massage">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Royal Couple Spa Jacuzzi Suite">
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span><i class="fa-regular fa-clock"></i> 60 Mins</span>
-              <span><i class="fa-solid fa-star text-gold"></i> 4.9 (165)</span>
-            </div>
-            <h3 class="card-title">Swedish Stress-Relief Aromatherapy</h3>
-            <p class="card-desc">Gentle pressure strokes combined with French lavender and eucalyptus essential oils to melt away daily anxiety.</p>
+            <span class="card-category">COUPLE RETREAT</span>
+            <h3 class="card-title">Royal Couple Spa Suite</h3>
+            <p class="card-desc">120-minute side-by-side aromatherapy massage followed by private Jacuzzi bath soak and Kashmiri Kahwa tea.</p>
             <div class="card-footer">
-              <span class="card-price">₹3,500</span>
-              <a href="booking.html?service=Swedish" class="btn btn-gold btn-sm">Book Spa</a>
+              <div>
+                <span class="card-price">₹9,999</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">120 mins</span>
+              </div>
+              <a href="booking.html?service=couple-spa" class="btn btn-gold btn-sm">Book Suite</a>
             </div>
           </div>
         </div>
 
-        <!-- Massage 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Deep Tissue Therapy">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Swedish Aromatherapy Body Massage">
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span><i class="fa-regular fa-clock"></i> 75 Mins</span>
-              <span><i class="fa-solid fa-star text-gold"></i> 4.8 (145)</span>
-            </div>
-            <h3 class="card-title">Deep Tissue Muscle Recovery</h3>
-            <p class="card-desc">Firm knuckle and elbow pressure targeting deep muscle knots, back stiffness, and posture tension.</p>
+            <span class="card-category">AROMATHERAPY</span>
+            <h3 class="card-title">Swedish Essential Oil Therapy</h3>
+            <p class="card-desc">Gentle long sliding strokes with organic lavender and eucalyptus oils to relieve stress and improve sleep.</p>
             <div class="card-footer">
-              <span class="card-price">₹3,999</span>
-              <a href="booking.html?service=Deep%20Tissue" class="btn btn-gold btn-sm">Book Spa</a>
+              <div>
+                <span class="card-price">₹3,500</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">60 mins</span>
+              </div>
+              <a href="booking.html?service=swedish" class="btn btn-gold btn-sm">Book Therapy</a>
             </div>
           </div>
         </div>
@@ -175,109 +176,73 @@
     </div>
   </section>
 
-  <!-- Couple Spa Suite Showcase -->
-  <section class="section section-elevated">
+  <!-- Spa FAQs Accordion -->
+  <section class="section section-light">
     <div class="container">
-      <div class="grid-2" style="align-items: center;">
-        <div class="reveal">
-          <span class="section-tag">ROMANTIC SANCTUARY</span>
-          <h2 class="section-title">Royal Couple Spa Suite</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
-            Step into our private, rose-petal adorned couple spa suite featuring dual massage tables, private jacuzzi, aromatherapy steam shower, and complimentary champagne and fruit platter.
-          </p>
-          <ul style="margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
-            <li style="display: flex; gap: 0.6rem; align-items: center;"><i class="fa-solid fa-circle-check text-gold"></i> 90-Min Full Body Massage for Two</li>
-            <li style="display: flex; gap: 0.6rem; align-items: center;"><i class="fa-solid fa-circle-check text-gold"></i> 30-Min Herbal Hydrotherapy Jacuzzi</li>
-            <li style="display: flex; gap: 0.6rem; align-items: center;"><i class="fa-solid fa-circle-check text-gold"></i> Exfoliating Sandalwood Body Scrub</li>
-            <li style="display: flex; gap: 0.6rem; align-items: center;"><i class="fa-solid fa-circle-check text-gold"></i> Artisanal Tea & Dessert Platter</li>
-          </ul>
-          <div style="display: flex; align-items: center; gap: 1.5rem;">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--gold-primary); font-weight: 700;">₹9,999 <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/ couple</span></span>
-            <a href="booking.html?service=Couple%20Spa" class="btn btn-gold">Book Suite</a>
+      <div class="section-header">
+        <span class="section-tag">SPA FAQs</span>
+        <h2 class="section-title">Frequently Asked Spa Questions</h2>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header">What should I wear during my spa therapy? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Single-use hygienic disposable undergarments are provided in all private therapy rooms. Your therapist will ensure full privacy during towel draping throughout your massage.</p>
           </div>
         </div>
 
-        <div class="reveal reveal-delay-2">
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-gold-glow);">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Couple Spa Sanctuary Suite">
+        <div class="accordion-item">
+          <button class="accordion-header">Are shower facilities available after the oil massage? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Yes. Every spa suite is equipped with a private hot rain shower, steam enclosure, organic body wash, and fresh luxury towels.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Body Scrubs & Polishing -->
-  <section class="section section-dark">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">SKIN GLOW & DETOX</span>
-        <h2 class="section-title">Body Scrubs & Ubtan Polishing</h2>
-      </div>
-
-      <div class="grid-3">
-        <div class="card reveal reveal-delay-1" style="padding: 2rem;">
-          <h3 style="font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 0.75rem;">Chandan & Sea Salt Polish</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Exfoliates dead skin cells, softens elbows and knees, and infuses natural sandalwood aroma.</p>
-          <div class="card-footer">
-            <span class="card-price">₹2,800</span>
-            <a href="booking.html?service=Chandan%20Polish" class="btn btn-gold btn-sm">Book</a>
-          </div>
-        </div>
-
-        <div class="card reveal reveal-delay-2" style="padding: 2rem;">
-          <h3 style="font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 0.75rem;">Coffee & Chocolate Body Detox</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Roasted Arabica coffee scrub that stimulates circulation and reduces cellulite appearance.</p>
-          <div class="card-footer">
-            <span class="card-price">₹3,200</span>
-            <a href="booking.html?service=Coffee%20Wrap" class="btn btn-gold btn-sm">Book</a>
-          </div>
-        </div>
-
-        <div class="card reveal reveal-delay-3" style="padding: 2rem;">
-          <h3 style="font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 0.75rem;">Traditional Ubtan Herbal Body Glow</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Pre-wedding turmeric, saffron, and chickpea flour body wrap for smooth radiant skin.</p>
-          <div class="card-footer">
-            <span class="card-price">₹2,999</span>
-            <a href="booking.html?service=Ubtan%20Glow" class="btn btn-gold btn-sm">Book</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Global Corporate Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">AG</div>
-            <div>AURA & GOLD <span class="logo-sub">Royal Salon & Spa</span></div>
-          </a>
-          <p>India's leading wellness spa chain.</p>
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
+          </div>
+          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="stylists.html">Master Stylists</a>
+            <a href="packages.html">Packages</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Specialties</h4>
           <div class="footer-links">
             <a href="hair-services.html">Hair Studio</a>
             <a href="beauty-skin.html">Skincare</a>
-            <a href="spa-wellness.html">Spa & Wellness</a>
+            <a href="spa-wellness.html">Ayurvedic Spa</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Booking</h4>
+          <h4>Contact</h4>
           <div class="footer-links">
-            <a href="packages.html">Packages</a>
-            <a href="booking.html">Book Slot</a>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
           </div>
-        </div>
-        <div class="footer-col">
-          <h4>Call Spa</h4>
-          <p>+91 98765 43210</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AURA & GOLD Luxury Salons & Spa Pvt Ltd.</p>
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>
     </div>
   </footer>

@@ -6,13 +6,9 @@
   <title>Hair Services, Balayage & Keratin — AURA & GOLD Salon</title>
   <meta name="description" content="Explore bespoke hair styling, balayage coloring, keratin smoothening, and Olaplex scalp treatments tailored for Indian hair textures.">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -21,141 +17,158 @@
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
+        <div class="logo-badge">AG</div>
         <div class="logo-text-wrap">
           <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
         </div>
       </a>
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
           <div class="dropdown-menu">
-            <a href="services.html">All Treatments</a>
-            <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skin & Medi-Facials</a>
-            <a href="spa-wellness.html">Spa & Wellness</a>
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="bridal-makeup.html" class="nav-link">Bridal</a>
-        <a href="stylists.html" class="nav-link">Experts</a>
+        <a href="stylists.html" class="nav-link">Stylists</a>
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="offers.html" class="nav-link">Offers</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="testimonials.html" class="nav-link">Reviews</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="phone-quick">
-          <i class="fa-solid fa-phone text-gold"></i>
-          <span>+91 98765 43210</span>
-        </a>
-        <a href="booking.html" class="btn btn-gold btn-sm">Book Slot</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
+        </div>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="services.html" class="drawer-link">All Services Menu</a>
+        <a href="hair-services.html" class="drawer-link active">Hair Studio & Balayage</a>
+        <a href="beauty-skin.html" class="drawer-link">Beauty & Skincare</a>
+        <a href="spa-wellness.html" class="drawer-link">Spa & Wellness</a>
+        <a href="bridal-makeup.html" class="drawer-link">Bridal Studio</a>
+        <a href="stylists.html" class="drawer-link">Our Master Stylists</a>
+        <a href="packages.html" class="drawer-link">Curated Packages</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
+    </div>
+    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+  </div>
   <div class="backdrop-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
-        <div class="logo-text-wrap">
-          <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
-        </div>
-      </a>
-      <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="drawer-links">
-      <a href="index.html" class="drawer-link">Home <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="about.html" class="drawer-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="hair-services.html" class="drawer-link active">Hair Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="beauty-skin.html" class="drawer-link">Skin & Medi-Facials <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="spa-wellness.html" class="drawer-link">Spa & Wellness <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="bridal-makeup.html" class="drawer-link">Bridal Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="stylists.html" class="drawer-link">Our Experts <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="packages.html" class="drawer-link">Luxury Packages <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="offers.html" class="drawer-link">Offers <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="gallery.html" class="drawer-link">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="testimonials.html" class="drawer-link">Reviews <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="booking.html" class="drawer-link">Book Appointment <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </aside>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1600&q=80" alt="Hair Salon Studio" class="page-header-bg">
-    <div class="container page-header-content">
-      <span class="section-tag">HAIR COUTURE & ARTISTRY</span>
-      <h1 class="section-title">Bespoke Hair Transformations</h1>
-      <p class="section-subtitle" style="margin: 0 auto;">Engineered specifically for Indian hair textures, volume, and monsoon humidity protection.</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Hair Services</span>
+        <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Hair Studio</span>
+      </div>
+      <h1 class="page-hero-title">Hair Design, Balayage & Restoration</h1>
+      <p class="page-hero-desc">Bespoke haircutting, ammonia-free hair coloring, organic keratin treatments, and Olaplex bond repair formulated for Indian hair health.</p>
+    </div>
+  </section>
+
+  <!-- 1. Hair Consultation -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="feature-split">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="Hair Porosity & Scalp Diagnosis">
+        </div>
+        <div class="feature-content">
+          <span class="section-tag">SCALP & HAIR HEALTH</span>
+          <h2>Scientific Hair Care Begins with Diagnosis</h2>
+          <p>Indian hair textures face unique environmental challenges: hard water mineral buildup, high humidity frizz, and UV pigment damage. Our master stylists start every session with a scalp diagnostics scan.</p>
+          <div class="feature-list">
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Porosity Evaluation:</strong> Testing cuticular moisture absorption to select optimal color developers.</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Scalp Health Check:</strong> Checking micro-circulation to prevent seasonal hair fall.</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 1: Hair Coloring & Balayage -->
-  <section class="section section-dark">
+  <!-- 2. Haircut & Styling Catalogue -->
+  <section class="section section-warm">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">COLOR COUTURE</span>
-        <h2 class="section-title">Balayage & Custom Hair Coloring</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Warm caramel, honey gold, mocha, and auburn tones formulated to flatter Indian skin undertones.</p>
+      <div class="section-header">
+        <span class="section-tag">CUT & STYLING</span>
+        <h2 class="section-title">Couture Haircuts & Styling</h2>
+        <p class="section-subtitle">Precision sculpting tailored to your face structure, hair density, and daily maintenance routine.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Card 1 -->
-        <div class="card reveal reveal-delay-1">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=600&q=80" alt="Caramel Balayage Indian Model" data-placeholder="INDIAN_BALAYAGE_MODEL_HAIR">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Couture Haircut">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Signature Caramel Balayage</h3>
-            <p class="card-desc">Seamless blend of rich espresso roots fading into sun-kissed warm caramel ribbons. Includes gloss toner & bond protector.</p>
+            <span class="card-category">CUT & BLOWDRY</span>
+            <h3 class="card-title">Art Director Couture Cut</h3>
+            <p class="card-desc">Personalized precision haircut including scalp shampoo, deep conditioning mask, and signature blowdry styling.</p>
             <div class="card-footer">
-              <span class="card-price">₹8,499</span>
-              <a href="booking.html?service=Balayage" class="btn btn-gold btn-sm">Book Treatment</a>
+              <div>
+                <span class="card-price">₹2,500</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">60 mins</span>
+              </div>
+              <a href="booking.html?service=couture-cut" class="btn btn-gold btn-sm">Book Cut</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?auto=format&fit=crop&w=600&q=80" alt="Global Hair Color Indian Model" data-placeholder="INDIAN_GLOBAL_COLOR_MODEL">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Keratin Smoothening">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Global Ammonia-Free Color</h3>
-            <p class="card-desc">Full head rich dark chocolate, mahogany, or burgundy global coverage using oil-infused gentle color formulas.</p>
+            <span class="card-category">SMOOTHENING</span>
+            <h3 class="card-title">Royal Keratin Treatment</h3>
+            <p class="card-desc">Formaldehyde-free protein infusion eliminating humidity frizz for 6 months while enhancing softness.</p>
             <div class="card-footer">
-              <span class="card-price">₹4,500</span>
-              <a href="booking.html?service=Global%20Color" class="btn btn-gold btn-sm">Book Treatment</a>
+              <div>
+                <span class="card-price">₹6,999</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">180 mins</span>
+              </div>
+              <a href="booking.html?service=keratin" class="btn btn-gold btn-sm">Book Keratin</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80" alt="Root Touchup Indian Model" data-placeholder="INDIAN_ROOT_TOUCHUP_MODEL">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80" alt="Olaplex Bond Repair Spa">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Express Root Touchup & Blowdry</h3>
-            <p class="card-desc">Grey coverage root coloring paired with scalp massage and red-carpet glam blowdry setting.</p>
+            <span class="card-category">BOND REPAIR</span>
+            <h3 class="card-title">Olaplex No.3 Scalp & Bond Spa</h3>
+            <p class="card-desc">Intensive disulfide bond repair therapy for chemically processed or heat-damaged hair shafts.</p>
             <div class="card-footer">
-              <span class="card-price">₹2,200</span>
-              <a href="booking.html?service=Root%20Touchup" class="btn btn-gold btn-sm">Book Treatment</a>
+              <div>
+                <span class="card-price">₹3,500</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">60 mins</span>
+              </div>
+              <a href="booking.html?service=olaplex-spa" class="btn btn-gold btn-sm">Book Spa</a>
             </div>
           </div>
         </div>
@@ -163,140 +176,73 @@
     </div>
   </section>
 
-  <!-- Section 2: Texture & Smoothening -->
-  <section class="section section-elevated">
+  <!-- Hair FAQs Accordion -->
+  <section class="section section-light">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">SILK & SHINE</span>
-        <h2 class="section-title">Keratin, Cysteine & Rebonding</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Eliminate 95% frizz while maintaining natural hair bounce and structural health.</p>
+      <div class="section-header">
+        <span class="section-tag">HAIR CARE FAQs</span>
+        <h2 class="section-title">Frequently Asked Hair Questions</h2>
       </div>
 
-      <div class="grid-3">
-        <!-- Smoothening 1 -->
-        <div class="card reveal reveal-delay-1">
-          <div class="card-body" style="padding: 2rem;">
-            <div style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">BESTSELLER</div>
-            <h3 style="font-size: 1.4rem; color: var(--text-white); margin-bottom: 0.75rem;">Royal Keratin Smoothing</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">0% Formaldehyde. Infuses hydrolyzed wheat protein & keratin into hair shaft. Results last 5-6 months.</p>
-            <div class="card-footer">
-              <span class="card-price">₹6,999</span>
-              <a href="booking.html?service=Keratin" class="btn btn-gold btn-sm">Book Slot</a>
-            </div>
+      <div class="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header">How long does French Balayage last on dark Indian hair? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Because balayage is hand-painted starting slightly away from your roots, it grows out seamlessly without harsh root lines. A typical balayage session lasts 4 to 6 months with simple gloss toner refreshes every 8 weeks.</p>
           </div>
         </div>
 
-        <!-- Smoothening 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card-body" style="padding: 2rem;">
-            <div style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">ORGANIC FORMULA</div>
-            <h3 style="font-size: 1.4rem; color: var(--text-white); margin-bottom: 0.75rem;">Cysteine Hair Therapy</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Natural amino-acid cysteine treatment that relaxes curls while retaining soft natural wave movement.</p>
-            <div class="card-footer">
-              <span class="card-price">₹7,500</span>
-              <a href="booking.html?service=Cysteine" class="btn btn-gold btn-sm">Book Slot</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Smoothening 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card-body" style="padding: 2rem;">
-            <div style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">ADVANCED FILLER</div>
-            <h3 style="font-size: 1.4rem; color: var(--text-white); margin-bottom: 0.75rem;">Botoplex Hair Rejuvenation</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Concentrated botox-peptide & hyaluronic filler treatment for chemically damaged or bleached hair.</p>
-            <div class="card-footer">
-              <span class="card-price">₹8,999</span>
-              <a href="booking.html?service=Botoplex" class="btn btn-gold btn-sm">Book Slot</a>
-            </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Is Keratin treatment safe for colored or bleached hair? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Yes. Our Royal Keratin treatment is 100% formaldehyde-free and safe for highlighted or color-treated hair. In fact, it locks in color vibrancy and seals damaged hair cuticles.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Scalp Rituals & Hair Spa -->
-  <section class="section section-dark">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">SCALP & HAIR HEALTH</span>
-        <h2 class="section-title">Luxury Hair Spa & Scalp Detox</h2>
-      </div>
-
-      <div class="grid-4">
-        <div class="card reveal reveal-delay-1" style="padding: 1.5rem;">
-          <h4 style="font-size: 1.15rem; color: var(--gold-primary); margin-bottom: 0.5rem;">Olaplex Bond Repair Spa</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">Patented bond-rebuilding treatment for instant hair strength.</p>
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="color: var(--text-white); font-weight: 700;">₹3,500</span>
-            <a href="booking.html?service=Olaplex%20Spa" class="btn btn-outline btn-sm">Book</a>
-          </div>
-        </div>
-
-        <div class="card reveal reveal-delay-2" style="padding: 1.5rem;">
-          <h4 style="font-size: 1.15rem; color: var(--gold-primary); margin-bottom: 0.5rem;">Moroccan Oil Hydrating Spa</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">Deep moisture infusion using pure Argan oil mask & steam.</p>
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="color: var(--text-white); font-weight: 700;">₹2,800</span>
-            <a href="booking.html?service=Moroccan%20Spa" class="btn btn-outline btn-sm">Book</a>
-          </div>
-        </div>
-
-        <div class="card reveal reveal-delay-3" style="padding: 1.5rem;">
-          <h4 style="font-size: 1.15rem; color: var(--gold-primary); margin-bottom: 0.5rem;">Anti-Dandruff Scalp Detox</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">Tea tree & salicylic acid scalp scrub to eliminate flaking.</p>
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="color: var(--text-white); font-weight: 700;">₹2,200</span>
-            <a href="booking.html?service=Scalp%20Detox" class="btn btn-outline btn-sm">Book</a>
-          </div>
-        </div>
-
-        <div class="card reveal reveal-delay-4" style="padding: 1.5rem;">
-          <h4 style="font-size: 1.15rem; color: var(--gold-primary); margin-bottom: 0.5rem;">Bhringraj Ayurvedic Head Spa</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">Warm herb-infused oil champi massage for hair growth & sleep.</p>
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="color: var(--text-white); font-weight: 700;">₹1,800</span>
-            <a href="booking.html?service=Bhringraj%20Spa" class="btn btn-outline btn-sm">Book</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Global Corporate Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">AG</div>
-            <div>AURA & GOLD <span class="logo-sub">Royal Salon & Spa</span></div>
-          </a>
-          <p>India's premier luxury hair salon.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Menu</h4>
-          <div class="footer-links">
-            <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skincare</a>
-            <a href="spa-wellness.html">Spa</a>
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
           </div>
+          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
         </div>
         <div class="footer-col">
           <h4>Navigation</h4>
           <div class="footer-links">
-            <a href="stylists.html">Stylists</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="stylists.html">Master Stylists</a>
             <a href="packages.html">Packages</a>
-            <a href="booking.html">Book Appointment</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Call Salon</h4>
-          <p>+91 98765 43210</p>
+          <h4>Specialties</h4>
+          <div class="footer-links">
+            <a href="hair-services.html">Hair Studio</a>
+            <a href="beauty-skin.html">Skincare</a>
+            <a href="spa-wellness.html">Ayurvedic Spa</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AURA & GOLD Luxury Salons & Spa Pvt Ltd.</p>
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>
     </div>
   </footer>

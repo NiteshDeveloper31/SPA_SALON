@@ -1,6 +1,6 @@
 /* ==========================================================================
-   AURA & GOLD - ROYAL INDIAN SALON & SPA
-   Interactive Lightbox & Portfolio Filter System
+   AURA & GOLD — Royal Indian Salon & Spa
+   Commercial Lightbox & Portfolio Filter System
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,53 +10,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Portfolio Category Filtering */
 function initGalleryFiltering() {
-  const filterBtns = document.querySelectorAll('.tab-btn[data-filter]');
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const filterBtns = document.querySelectorAll('.filter-btn[data-gallery-filter]');
+  const items = document.querySelectorAll('.gallery-item');
 
-  if (!filterBtns.length || !galleryItems.length) return;
+  if (!filterBtns.length || !items.length) return;
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
+      const filter = btn.getAttribute('data-gallery-filter');
 
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      galleryItems.forEach(item => {
+      items.forEach(item => {
         const category = item.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
           item.style.display = 'block';
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1)';
-          }, 50);
         } else {
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.85)';
-          setTimeout(() => {
-            item.style.display = 'none';
-          }, 300);
+          item.style.display = 'none';
         }
       });
     });
   });
 }
 
-/* Premium Fullscreen Lightbox Modal */
+/* Fullscreen Lightbox Modal Viewer */
 function initGalleryLightbox() {
   const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
   if (!galleryItems.length) return;
 
-  // Inject Lightbox Modal markup into DOM if not present
+  // Create & inject Lightbox markup if not present
   let lightbox = document.querySelector('.lightbox-modal');
   if (!lightbox) {
     lightbox = document.createElement('div');
     lightbox.className = 'lightbox-modal';
     lightbox.innerHTML = `
-      <div class="lightbox-container">
-        <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
         <button class="lightbox-nav lightbox-prev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
-        <img src="" class="lightbox-img" alt="Gallery Lightbox View">
+        <img src="" class="lightbox-img" alt="Gallery Lightbox Preview">
         <button class="lightbox-nav lightbox-next" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
         <div class="lightbox-caption"></div>
       </div>
@@ -82,11 +74,11 @@ function initGalleryLightbox() {
     currentIndex = index;
     const currentItem = visibleItems[currentIndex];
     const img = currentItem.querySelector('img');
-    const title = currentItem.querySelector('.gallery-title')?.textContent || '';
+    const title = currentItem.querySelector('.gallery-title')?.textContent || img?.alt || 'AURA & GOLD Gallery';
 
     modalImg.src = img.src;
-    modalImg.alt = img.alt || title;
-    caption.textContent = title;
+    modalImg.alt = title;
+    caption.textContent = `${title} (${currentIndex + 1} of ${visibleItems.length})`;
 
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -98,7 +90,8 @@ function initGalleryLightbox() {
   }
 
   galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
       const visibleItems = galleryItems.filter(i => i.style.display !== 'none');
       const idx = visibleItems.indexOf(item);
       openLightbox(idx >= 0 ? idx : 0);
@@ -109,12 +102,11 @@ function initGalleryLightbox() {
   if (prevBtn) prevBtn.addEventListener('click', () => openLightbox(currentIndex - 1));
   if (nextBtn) nextBtn.addEventListener('click', () => openLightbox(currentIndex + 1));
 
-  // Close on backdrop click
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // Keyboard Navigation (ESC, Left, Right Arrow)
+  // Keyboard navigation
   window.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('active')) return;
     if (e.key === 'Escape') closeLightbox();

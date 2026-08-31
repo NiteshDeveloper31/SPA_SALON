@@ -1,6 +1,6 @@
 /* ==========================================================================
-   AURA & GOLD - ROYAL INDIAN SALON & SPA
-   Interactive Booking Engine & Confirmation Modal System
+   AURA & GOLD — Royal Indian Salon & Spa
+   Commercial Step-by-Step Appointment Booking Flow & Receipt Generator
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,18 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initBookingEngine() {
-  const appointmentForm = document.getElementById('appointmentForm') || document.getElementById('bookingForm');
-  if (!appointmentForm) return;
+  const form = document.getElementById('bookingForm');
+  if (!form) return;
 
-  const serviceSelect = document.getElementById('serviceSelect') || document.getElementById('bookingService');
-  const stylistSelect = document.getElementById('stylistSelect') || document.getElementById('bookingStylist');
-  const locationSelect = document.getElementById('locationSelect') || document.getElementById('bookingLocation');
-  const dateInput = document.getElementById('dateInput') || document.getElementById('bookingDate');
-
+  const serviceSelect = document.getElementById('bookingService');
+  const locationSelect = document.getElementById('bookingLocation');
+  const stylistSelect = document.getElementById('bookingStylist');
+  const dateInput = document.getElementById('bookingDate');
   const slotBtns = document.querySelectorAll('.slot-btn');
   const summaryBox = document.getElementById('bookingSummaryBox');
 
-  let selectedSlot = '11:30 AM';
+  let selectedTimeSlot = '11:30 AM';
 
   // Set default date to tomorrow
   if (dateInput && !dateInput.value) {
@@ -28,7 +27,7 @@ function initBookingEngine() {
     dateInput.value = tomorrow.toISOString().split('T')[0];
   }
 
-  // Pre-select service from URL parameter (e.g. ?service=keratin)
+  // Pre-select service/stylist from URL query params (e.g. ?service=balayage)
   const urlParams = new URLSearchParams(window.location.search);
   const paramService = urlParams.get('service');
   const paramStylist = urlParams.get('stylist');
@@ -53,116 +52,139 @@ function initBookingEngine() {
     }
   }
 
-  // Slot selector listener
+  // Restore saved selection from localStorage if available
+  const savedData = localStorage.getItem('aura_booking_draft');
+  if (savedData && !paramService) {
+    try {
+      const parsed = JSON.parse(savedData);
+      if (parsed.service && serviceSelect) serviceSelect.value = parsed.service;
+      if (parsed.location && locationSelect) locationSelect.value = parsed.location;
+      if (parsed.stylist && stylistSelect) stylistSelect.value = parsed.stylist;
+      if (parsed.date && dateInput) dateInput.value = parsed.date;
+      if (parsed.slot) selectedTimeSlot = parsed.slot;
+    } catch(e) {}
+  }
+
+  // Slot buttons selection listener
   slotBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       slotBtns.forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
-      selectedSlot = btn.getAttribute('data-time') || btn.textContent.trim();
-      renderSummary();
+      selectedTimeSlot = btn.getAttribute('data-time') || btn.textContent.trim();
+      saveDraft();
+      updateSummary();
     });
   });
 
-  if (serviceSelect) serviceSelect.addEventListener('change', renderSummary);
-  if (stylistSelect) stylistSelect.addEventListener('change', renderSummary);
-  if (locationSelect) locationSelect.addEventListener('change', renderSummary);
-  if (dateInput) dateInput.addEventListener('change', renderSummary);
+  if (serviceSelect) serviceSelect.addEventListener('change', () => { saveDraft(); updateSummary(); });
+  if (locationSelect) locationSelect.addEventListener('change', () => { saveDraft(); updateSummary(); });
+  if (stylistSelect) stylistSelect.addEventListener('change', () => { saveDraft(); updateSummary(); });
+  if (dateInput) dateInput.addEventListener('change', () => { saveDraft(); updateSummary(); });
 
-  function renderSummary() {
+  function saveDraft() {
+    const draft = {
+      service: serviceSelect?.value || '',
+      location: locationSelect?.value || '',
+      stylist: stylistSelect?.value || '',
+      date: dateInput?.value || '',
+      slot: selectedTimeSlot
+    };
+    localStorage.setItem('aura_booking_draft', JSON.stringify(draft));
+  }
+
+  function updateSummary() {
     if (!summaryBox) return;
 
     const selectedServiceOpt = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex] : null;
-    const serviceName = selectedServiceOpt ? selectedServiceOpt.text.split('—')[0] : 'Royal Keratin Smoothening';
-    const servicePrice = selectedServiceOpt ? selectedServiceOpt.getAttribute('data-price') ? `₹${parseInt(selectedServiceOpt.getAttribute('data-price')).toLocaleString('en-IN')}` : '₹6,999' : '₹6,999';
-    const duration = selectedServiceOpt ? selectedServiceOpt.getAttribute('data-duration') || '180 mins' : '180 mins';
-
-    const selectedStylistOpt = stylistSelect ? stylistSelect.options[stylistSelect.selectedIndex] : null;
-    const stylistName = selectedStylistOpt ? selectedStylistOpt.text : 'Ananya Sharma — Creative Hair Director';
+    const serviceName = selectedServiceOpt ? selectedServiceOpt.text.split('—')[0].trim() : 'Royal Hair Treatment';
+    const priceAttr = selectedServiceOpt ? selectedServiceOpt.getAttribute('data-price') : null;
+    const servicePrice = priceAttr ? `₹${parseInt(priceAttr).toLocaleString('en-IN')}` : '₹4,500';
+    const duration = selectedServiceOpt ? selectedServiceOpt.getAttribute('data-duration') || '90 mins' : '90 mins';
 
     const selectedLocOpt = locationSelect ? locationSelect.options[locationSelect.selectedIndex] : null;
-    const locationName = selectedLocOpt ? selectedLocOpt.text : 'Mumbai — Waterfield Road, Bandra West';
+    const locationName = selectedLocOpt ? selectedLocOpt.text.split('—')[0].trim() : 'Bandra West, Mumbai';
+
+    const selectedStylistOpt = stylistSelect ? stylistSelect.options[stylistSelect.selectedIndex] : null;
+    const stylistName = selectedStylistOpt ? selectedStylistOpt.text.split('—')[0].trim() : 'Senior Stylist';
 
     summaryBox.innerHTML = `
-      <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 1.75rem; box-shadow: 0 15px 40px rgba(0,0,0,0.5);">
-        <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">APPOINTMENT SUMMARY</span>
-        <h3 style="font-size: 1.5rem; color: var(--text-white); margin: 0.35rem 0 1.25rem 0; font-family: var(--font-serif);">${serviceName}</h3>
+      <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+        <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1.5px;">APPOINTMENT SUMMARY</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin: 0.35rem 0 1rem 0;">${serviceName}</h3>
         
-        <div style="display: flex; flex-direction: column; gap: 0.85rem; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.25rem 0; margin-bottom: 1.25rem;">
-          <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-            <span style="color: var(--text-secondary);"><i class="fa-solid fa-location-dot text-gold"></i> Location:</span>
-            <strong style="color: var(--text-white); text-align: right;">${locationName.split('—')[0]}</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-            <span style="color: var(--text-secondary);"><i class="fa-solid fa-scissors text-gold"></i> Specialist:</span>
-            <strong style="color: var(--text-white); text-align: right;">${stylistName.split('—')[0]}</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-            <span style="color: var(--text-secondary);"><i class="fa-regular fa-calendar-days text-gold"></i> Date & Slot:</span>
-            <strong style="color: var(--gold-light); text-align: right;">${dateInput?.value || 'Tomorrow'} @ ${selectedSlot}</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-            <span style="color: var(--text-secondary);"><i class="fa-regular fa-clock text-gold"></i> Est. Duration:</span>
-            <strong style="color: var(--text-white);">${duration}</strong>
-          </div>
+        <div style="display: flex; flex-direction: column; gap: 0.65rem; padding: 1rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin-bottom: 1rem; font-size: 0.88rem;">
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Location:</span> <strong>${locationName}</strong></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Specialist:</span> <strong>${stylistName}</strong></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Date & Slot:</span> <strong>${dateInput?.value || 'Tomorrow'} @ ${selectedTimeSlot}</strong></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-secondary);">Duration:</span> <strong>${duration}</strong></div>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span style="font-size: 0.9rem; color: var(--text-muted);">Total Payable (at salon):</span>
-          <span style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--gold-primary); font-weight: 700;">${servicePrice}</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Total Payable (at salon):</span>
+          <span style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">${servicePrice}</span>
         </div>
       </div>
     `;
   }
 
-  renderSummary();
+  updateSummary();
 
-  // Confirmation Receipt Modal Submission
-  appointmentForm.addEventListener('submit', (e) => {
+  // Handle Static Booking Submission Receipt
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const clientNameInput = document.getElementById('clientName');
-    const clientPhoneInput = document.getElementById('clientPhone');
+    const nameInput = document.getElementById('clientName');
+    const phoneInput = document.getElementById('clientPhone');
 
-    const clientName = clientNameInput ? clientNameInput.value : 'Sanjana Sharma';
-    const clientPhone = clientPhoneInput ? clientPhoneInput.value : '+91 98765 43210';
-
-    const modal = document.getElementById('bookingModal');
-    const modalDetails = document.getElementById('modalDetails');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const clientName = nameInput ? nameInput.value : 'Sanjana Sharma';
+    const clientPhone = phoneInput ? phoneInput.value : '+91 98765 43210';
 
     const selectedServiceOpt = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex] : null;
-    const serviceName = selectedServiceOpt ? selectedServiceOpt.text.split('—')[0] : 'Royal Keratin Smoothening';
-    const servicePrice = selectedServiceOpt ? selectedServiceOpt.getAttribute('data-price') ? `₹${parseInt(selectedServiceOpt.getAttribute('data-price')).toLocaleString('en-IN')}` : '₹6,999' : '₹6,999';
+    const serviceName = selectedServiceOpt ? selectedServiceOpt.text.split('—')[0].trim() : 'Hair Treatment';
+    const priceAttr = selectedServiceOpt ? selectedServiceOpt.getAttribute('data-price') : null;
+    const servicePrice = priceAttr ? `₹${parseInt(priceAttr).toLocaleString('en-IN')}` : '₹4,500';
 
-    const reservationId = `AG-${Math.floor(100000 + Math.random() * 900000)}`;
+    const referenceId = `AG-${Math.floor(100000 + Math.random() * 900000)}`;
 
-    if (modal && modalDetails) {
-      modalDetails.innerHTML = `
-        <div style="width: 75px; height: 75px; border-radius: 50%; background: var(--gold-gradient); color: var(--bg-dark); font-size: 2.4rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; box-shadow: var(--gold-glow); border: 2px solid #FFF;">✓</div>
-        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--text-white); margin-bottom: 0.35rem;">Appointment Reserved!</h2>
-        <p style="color: var(--gold-primary); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; margin-bottom: 1.5rem;">RESERVATION ID: #${reservationId}</p>
+    showReceiptModal(clientName, clientPhone, serviceName, servicePrice, referenceId);
+  });
+
+  function showReceiptModal(name, phone, service, price, refId) {
+    let modal = document.querySelector('.booking-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.className = 'lightbox-modal booking-modal';
+      document.body.appendChild(modal);
+    }
+
+    modal.innerHTML = `
+      <div class="lightbox-content" style="max-width: 540px; background: #FFFFFF; padding: 2.5rem 2rem; border-radius: var(--radius-md); text-align: center; color: var(--text-primary);">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent-gold-light); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.25rem auto;"><i class="fa-solid fa-check"></i></div>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 0.35rem;">Appointment Requested</h2>
+        <p style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem;">CONFIRMATION REF: #${refId}</p>
         
-        <div style="background: var(--bg-dark); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 1.5rem; text-align: left; margin-bottom: 1.75rem;">
-          <p style="margin-bottom: 0.6rem; color: var(--text-secondary);"><strong>Guest:</strong> <span style="color: #FFF;">${clientName} (${clientPhone})</span></p>
-          <p style="margin-bottom: 0.6rem; color: var(--text-secondary);"><strong>Treatment:</strong> <span style="color: #FFF;">${serviceName}</span></p>
-          <p style="margin-bottom: 0.6rem; color: var(--text-secondary);"><strong>Date & Slot:</strong> <span style="color: var(--gold-light);">${dateInput?.value || 'Tomorrow'} @ ${selectedSlot}</span></p>
-          <p style="margin-bottom: 0.6rem; color: var(--text-secondary);"><strong>Total Payable:</strong> <span style="color: var(--gold-primary); font-weight: 700;">${servicePrice}</span> (Pay after treatment)</p>
-          <p style="color: var(--text-secondary); margin: 0;"><strong>Perks Included:</strong> <span style="color: #FFF;">Private Suite, Kashmiri Kahwa Bar & Free Valet</span></p>
+        <div style="background: var(--bg-main); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem; text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">
+          <p style="margin-bottom: 0.5rem;"><strong>Guest:</strong> ${name} (${phone})</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Treatment:</strong> ${service}</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Date & Time:</strong> ${dateInput?.value || 'Tomorrow'} @ ${selectedTimeSlot}</p>
+          <p style="margin-bottom: 0;"><strong>Payable at Salon:</strong> ${price}</p>
         </div>
 
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 2rem;">Instant SMS & WhatsApp receipt sent to ${clientPhone}. We look forward to pampering you!</p>
-        <button class="btn btn-gold modal-done-btn" style="width: 100%;">Return to Home</button>
-      `;
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.75rem;">This is a demonstration booking request. Our team will contact you via WhatsApp to reconfirm your time slot.</p>
+        <button class="btn btn-primary modal-close-btn" style="width: 100%;">Done & Return Home</button>
+      </div>
+    `;
 
-      modal.classList.add('active');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
-      const doneBtn = modalDetails.querySelector('.modal-done-btn');
-      if (doneBtn) doneBtn.onclick = () => {
-        modal.classList.remove('active');
-        window.location.href = 'index.html';
-      };
-      if (modalCloseBtn) modalCloseBtn.onclick = () => modal.classList.remove('active');
-    }
-  });
+    const closeBtn = modal.querySelector('.modal-close-btn');
+    if (closeBtn) closeBtn.onclick = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      localStorage.removeItem('aura_booking_draft');
+      window.location.href = 'index.html';
+    };
+  }
 }

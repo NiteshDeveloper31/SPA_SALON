@@ -1,16 +1,15 @@
 /* ==========================================================================
-   AURA & GOLD - ROYAL INDIAN SALON & SPA
-   Main Luxury Interactive Application Logic
+   AURA & GOLD — Royal Indian Salon & Spa
+   Commercial Application Logic & Interactive Outlets Engine
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileDrawer();
-  initCounters();
+  initAccordions();
   initActiveNavLink();
-  initVIPToastNotification();
-  initFloatingWhatsApp();
-  initLuxuryCalculator();
+  initOutletsMap();
+  initServiceFilters();
 });
 
 /* Sticky Header on Scroll */
@@ -27,7 +26,7 @@ function initNavbar() {
   });
 }
 
-/* Mobile Drawer Menu */
+/* Mobile Navigation Drawer */
 function initMobileDrawer() {
   const toggleBtn = document.querySelector('.mobile-toggle');
   const closeBtn = document.querySelector('.drawer-close');
@@ -53,38 +52,28 @@ function initMobileDrawer() {
   if (backdrop) backdrop.addEventListener('click', closeDrawer);
 }
 
-/* Animated Number Counters */
-function initCounters() {
-  const counters = document.querySelectorAll('.counter-val');
-  if (!counters.length) return;
+/* FAQ Accordion Toggle */
+function initAccordions() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  if (!accordionItems.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const finalVal = parseInt(target.getAttribute('data-target') || '0', 10);
-        let startVal = 0;
-        const duration = 2000;
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    if (!header) return;
 
-        const timer = setInterval(() => {
-          startVal += Math.ceil(finalVal / 45);
-          if (startVal >= finalVal) {
-            target.textContent = finalVal.toLocaleString('en-IN');
-            clearInterval(timer);
-          } else {
-            target.textContent = startVal.toLocaleString('en-IN');
-          }
-        }, 30);
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
 
-        observer.unobserve(target);
+      accordionItems.forEach(i => i.classList.remove('active'));
+
+      if (!isActive) {
+        item.classList.add('active');
       }
     });
-  }, { threshold: 0.5 });
-
-  counters.forEach(counter => observer.observe(counter));
+  });
 }
 
-/* Highlight Current Page Nav Link */
+/* Highlight Current Active Nav Link */
 function initActiveNavLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-link, .drawer-link');
@@ -97,126 +86,117 @@ function initActiveNavLink() {
   });
 }
 
-/* Realistic Live VIP Notification Toast */
-function initVIPToastNotification() {
-  const toastContainer = document.createElement('div');
-  toastContainer.className = 'vip-toast';
-  document.body.appendChild(toastContainer);
+/* Interactive Leaflet Outlets Map & Tab Selector */
+function initOutletsMap() {
+  const mapElement = document.getElementById('leafletMap');
+  if (!mapElement || typeof L === 'undefined') return;
 
-  const notifications = [
-    { title: 'Sanjana S.', action: 'reserved a VIP Bridal Suite', location: 'Bandra West, Mumbai', time: '2 mins ago' },
-    { title: 'Meera K.', action: 'booked Caramel Balayage', location: 'Indiranagar, Bengaluru', time: '5 mins ago' },
-    { title: 'Rajesh M.', action: 'booked Royal Couple Spa', location: 'Connaught Place, New Delhi', time: '12 mins ago' },
-    { title: 'Anusha R.', action: 'claimed 20% OFF Promo Code', location: 'Jubilee Hills, Hyderabad', time: '18 mins ago' }
-  ];
+  // 4 Flagship Metro Outlets Data
+  const outletsData = {
+    mumbai: {
+      name: 'Mumbai — Bandra West Sanctuary',
+      lat: 19.0600,
+      lng: 72.8300,
+      address: 'Waterfield Road, Bandra West, Mumbai, Maharashtra 400050',
+      phone: '+91 98765 43210',
+      hours: 'Mon – Sun: 09:00 AM – 09:00 PM',
+      directions: 'https://maps.google.com/?q=Bandra+West+Mumbai'
+    },
+    delhi: {
+      name: 'New Delhi — Connaught Place Sanctuary',
+      lat: 28.6315,
+      lng: 77.2167,
+      address: 'Block M, Outer Circle, Connaught Place, New Delhi 110001',
+      phone: '+91 98765 43211',
+      hours: 'Mon – Sun: 09:30 AM – 09:00 PM',
+      directions: 'https://maps.google.com/?q=Connaught+Place+New+Delhi'
+    },
+    bengaluru: {
+      name: 'Bengaluru — Indiranagar Sanctuary',
+      lat: 12.9784,
+      lng: 77.6408,
+      address: '100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038',
+      phone: '+91 98765 43212',
+      hours: 'Mon – Sun: 09:00 AM – 09:00 PM',
+      directions: 'https://maps.google.com/?q=Indiranagar+Bengaluru'
+    },
+    hyderabad: {
+      name: 'Hyderabad — Jubilee Hills Sanctuary',
+      lat: 17.4319,
+      lng: 78.4071,
+      address: 'Road No. 36, Opposite Metro Pillar 165, Jubilee Hills, Hyderabad 500033',
+      phone: '+91 98765 43213',
+      hours: 'Mon – Sun: 09:30 AM – 09:00 PM',
+      directions: 'https://maps.google.com/?q=Jubilee+Hills+Hyderabad'
+    }
+  };
 
-  let currentIndex = 0;
+  // Initialize Leaflet Map
+  const map = L.map('leafletMap', { scrollWheelZoom: false }).setView([19.0600, 72.8300], 13);
 
-  function showNextNotification() {
-    const notif = notifications[currentIndex];
-    toastContainer.innerHTML = `
-      <div class="vip-toast-icon">✓</div>
-      <div>
-        <h5 style="color: var(--gold-primary); font-size: 0.9rem; margin: 0;">${notif.title} ${notif.action}</h5>
-        <p style="color: var(--text-muted); font-size: 0.78rem; margin: 2px 0 0 0;">${notif.location} • ${notif.time}</p>
-      </div>
-    `;
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
 
-    toastContainer.classList.add('show');
+  const markers = {};
 
-    setTimeout(() => {
-      toastContainer.classList.remove('show');
-    }, 4500);
-
-    currentIndex = (currentIndex + 1) % notifications.length;
-  }
-
-  setTimeout(showNextNotification, 4000);
-  setInterval(showNextNotification, 14000);
-}
-
-/* Floating WhatsApp Concierge Widget */
-function initFloatingWhatsApp() {
-  const waBtn = document.createElement('a');
-  waBtn.href = 'https://wa.me/919876543210?text=Hello%20AURA%20%26%20GOLD,%20I%20would%20like%20to%20inquire%20about%20a%20luxury%20salon%20appointment.';
-  waBtn.target = '_blank';
-  waBtn.className = 'whatsapp-float';
-  waBtn.setAttribute('aria-label', 'Chat with VIP Concierge on WhatsApp');
-  waBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
-  document.body.appendChild(waBtn);
-}
-
-/* Interactive Luxury Hair & Beauty Consultation Calculator */
-function initLuxuryCalculator() {
-  const optBtns = document.querySelectorAll('.calc-opt-btn');
-  if (!optBtns.length) return;
-
-  const resultTitle = document.getElementById('calcResultTitle');
-  const resultDesc = document.getElementById('calcResultDesc');
-  const resultPrice = document.getElementById('calcResultPrice');
-  const resultBtn = document.getElementById('calcResultBtn');
-
-  let selectedCategory = 'hair';
-  let selectedNeed = 'keratin';
-
-  optBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const group = btn.getAttribute('data-group');
-      const val = btn.getAttribute('data-val');
-
-      // Unselect siblings in same group
-      document.querySelectorAll(`.calc-opt-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      if (group === 'category') selectedCategory = val;
-      if (group === 'need') selectedNeed = val;
-
-      updateCalculatorResult(selectedCategory, selectedNeed);
-    });
+  // Add markers for all 4 outlets
+  Object.keys(outletsData).forEach(key => {
+    const item = outletsData[key];
+    const marker = L.marker([item.lat, item.lng]).addTo(map);
+    marker.bindPopup(`<strong>${item.name}</strong><br>${item.address}`);
+    markers[key] = marker;
   });
 
-  function updateCalculatorResult(cat, need) {
-    if (!resultTitle || !resultPrice) return;
+  // Outlet Tab Click Listeners
+  const outletTabs = document.querySelectorAll('.outlet-tab');
+  const addressEl = document.getElementById('outletDisplayAddress');
+  const phoneEl = document.getElementById('outletDisplayPhone');
+  const hoursEl = document.getElementById('outletDisplayHours');
+  const directionsEl = document.getElementById('outletDisplayDirections');
 
-    if (cat === 'hair') {
-      if (need === 'repair') {
-        resultTitle.textContent = 'Royal Keratin Smoothening + Olaplex Repair';
-        resultDesc.textContent = 'Frizz-free silky smooth hair for 6 months with bond strengthening.';
-        resultPrice.textContent = '₹6,999';
-        resultBtn.href = 'booking.html?service=Keratin';
-      } else if (need === 'color') {
-        resultTitle.textContent = 'Signature French Caramel Balayage';
-        resultDesc.textContent = 'Sun-kissed hand-painted highlights with glossy toner treatment.';
-        resultPrice.textContent = '₹8,499';
-        resultBtn.href = 'booking.html?service=Balayage';
-      } else {
-        resultTitle.textContent = 'Couture Haircut & Red-Carpet Blowdry';
-        resultDesc.textContent = 'Precision hair sculpting with luxury caviar scalp massage.';
-        resultPrice.textContent = '₹2,500';
-        resultBtn.href = 'booking.html?service=Couture%20Cut';
-      }
-    } else if (cat === 'skin') {
-      if (need === 'glow') {
-        resultTitle.textContent = '24K Kashmiri Saffron Kumkumadi Facial';
-        resultDesc.textContent = 'Pure 24K edible gold leaves & saffron infusion for wedding radiance.';
-        resultPrice.textContent = '₹4,499';
-        resultBtn.href = 'booking.html?service=Saffron%20Facial';
-      } else {
-        resultTitle.textContent = 'Hydra-Dermabrasion Deep Oxygen Infusion';
-        resultDesc.textContent = 'Vacuum pore extraction with glycolic glow peel and hyaluronic jet.';
-        resultPrice.textContent = '₹3,999';
-        resultBtn.href = 'booking.html?service=Hydra%20Facial';
-      }
-    } else if (cat === 'bridal') {
-      resultTitle.textContent = 'HD Airbrush Royal Bridal Package';
-      resultDesc.textContent = 'Waterproof 4K makeup, saree/dupatta draping, and hair styling.';
-      resultPrice.textContent = '₹28,000';
-      resultBtn.href = 'booking.html?service=Bridal%20Package';
-    } else {
-      resultTitle.textContent = 'Royal Abhyanga Warm Ayurvedic Oil Spa';
-      resultDesc.textContent = '90 Mins Kerala warm Dhanwantharam herbal oil deep tissue massage.';
-      resultPrice.textContent = '₹4,999';
-      resultBtn.href = 'booking.html?service=Ayurvedic%20Spa';
-    }
-  }
+  outletTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const key = tab.getAttribute('data-outlet');
+      const data = outletsData[key];
+      if (!data) return;
+
+      outletTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      map.flyTo([data.lat, data.lng], 14, { duration: 1.2 });
+      markers[key].openPopup();
+
+      if (addressEl) addressEl.textContent = data.address;
+      if (phoneEl) phoneEl.textContent = data.phone;
+      if (hoursEl) hoursEl.textContent = data.hours;
+      if (directionsEl) directionsEl.href = data.directions;
+    });
+  });
+}
+
+/* Service Category Filter Tabs */
+function initServiceFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+  const cards = document.querySelectorAll('.filter-card');
+
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
 }

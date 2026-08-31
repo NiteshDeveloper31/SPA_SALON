@@ -6,13 +6,9 @@
   <title>Royal Indian Bridal Studio & Makeup — AURA & GOLD</title>
   <meta name="description" content="India's premier bridal makeup studio offering HD airbrush makeup, saree draping, pre-bridal packages, and groom styling across Mumbai, Delhi, Bengaluru & Hyderabad.">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -21,142 +17,158 @@
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
+        <div class="logo-badge">AG</div>
         <div class="logo-text-wrap">
           <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
         </div>
       </a>
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="nav-link">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+          <a href="services.html" class="nav-link active">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
           <div class="dropdown-menu">
-            <a href="services.html">All Treatments</a>
-            <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skin & Medi-Facials</a>
-            <a href="spa-wellness.html">Spa & Wellness</a>
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="bridal-makeup.html" class="nav-link active">Bridal</a>
-        <a href="stylists.html" class="nav-link">Experts</a>
+        <a href="stylists.html" class="nav-link">Stylists</a>
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="offers.html" class="nav-link">Offers</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="testimonials.html" class="nav-link">Reviews</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="phone-quick">
-          <i class="fa-solid fa-phone text-gold"></i>
-          <span>+91 98765 43210</span>
-        </a>
-        <a href="booking.html" class="btn btn-gold btn-sm">Book Slot</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="backdrop-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">AG</div>
-        <div class="logo-text-wrap">
-          <span class="logo-title">AURA & GOLD</span>
-          <span class="logo-sub">Royal Salon & Spa</span>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
         </div>
-      </a>
-      <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="services.html" class="drawer-link">All Services Menu</a>
+        <a href="hair-services.html" class="drawer-link">Hair Studio & Balayage</a>
+        <a href="beauty-skin.html" class="drawer-link">Beauty & Skincare</a>
+        <a href="spa-wellness.html" class="drawer-link">Spa & Wellness</a>
+        <a href="bridal-makeup.html" class="drawer-link active">Bridal Studio</a>
+        <a href="stylists.html" class="drawer-link">Our Master Stylists</a>
+        <a href="packages.html" class="drawer-link">Curated Packages</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
     </div>
-    <div class="drawer-links">
-      <a href="index.html" class="drawer-link">Home <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="about.html" class="drawer-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="hair-services.html" class="drawer-link">Hair Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="beauty-skin.html" class="drawer-link">Skin & Medi-Facials <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="spa-wellness.html" class="drawer-link">Spa & Wellness <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="bridal-makeup.html" class="drawer-link active">Bridal Studio <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="stylists.html" class="drawer-link">Our Experts <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="packages.html" class="drawer-link">Luxury Packages <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="offers.html" class="drawer-link">Offers <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="gallery.html" class="drawer-link">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="testimonials.html" class="drawer-link">Reviews <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="booking.html" class="drawer-link">Book Appointment <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </aside>
+    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+  </div>
+  <div class="backdrop-overlay"></div>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80" alt="Royal Indian Bride Makeup Studio" class="page-header-bg">
-    <div class="container page-header-content">
-      <span class="section-tag">CELEBRITY BRIDAL COUTURE</span>
-      <h1 class="section-title">Royal Indian Bridal Studio</h1>
-      <p class="section-subtitle" style="margin: 0 auto;">Creating timeless, waterproof HD & 4K Airbrush bridal looks for over 15,000 Indian brides.</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> <span>/</span> <span>Bridal & Makeup</span>
+        <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Bridal Studio</span>
+      </div>
+      <h1 class="page-hero-title">Indian Bridal Studio & Artistry</h1>
+      <p class="page-hero-desc">Couture HD and 4K airbrush bridal makeup, saree/dupatta draping, pre-wedding skin prep, and Maharajah groom styling for your special day.</p>
+    </div>
+  </section>
+
+  <!-- 1. Bridal Philosophy -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="feature-split">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Indian Bridal Makeup Artistry">
+        </div>
+        <div class="feature-content">
+          <span class="section-tag">BRIDAL EXCELLENCE</span>
+          <h2>Crafted for 4K Cameras & Emotional Moments</h2>
+          <p>Your wedding day requires makeup that stays fresh through 12+ hours of wedding lights, ceremonies, and tears of joy. Our senior bridal artists specialize in high-definition waterproof airbrush techniques.</p>
+          <div class="feature-list">
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Pre-Wedding Trial Sessions:</strong> Full makeup and hair trial 2 weeks prior to final wedding.</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check text-gold"></i> <span><strong>Dupatta & Saree Styling:</strong> Expert draping by master stylists in traditional North & South Indian heritage styles.</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 1: Bridal Looks -->
-  <section class="section section-dark">
+  <!-- 2. Bridal Looks Grid -->
+  <section class="section section-warm">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">CUSTOM BRIDAL LOOKS</span>
-        <h2 class="section-title">Bridal Makeup Packages</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Using premium luxury cosmetics: Charlotte Tilbury, Tom Ford, NARS, Huda Beauty & Dior.</p>
+      <div class="section-header">
+        <span class="section-tag">BRIDAL MENU</span>
+        <h2 class="section-title">Bridal & Wedding Services</h2>
+        <p class="section-subtitle">Tailored packages for brides, grooms, and bridal parties across all wedding ceremonies.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Bridal 1 -->
-        <div class="card reveal reveal-delay-1">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="North Indian Royal Bridal Look" data-placeholder="INDIAN_NORTH_BRIDE_MODEL">
-            <span class="card-badge">ROYAL SIGNATURE</span>
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="HD Royal Bridal Makeup">
           </div>
           <div class="card-body">
-            <h3 class="card-title">HD Royal Bridal Makeup</h3>
-            <p class="card-desc">High-definition waterproof base, smokey/gilded eyes, royal dupatta draping, luxury false lashes, and hair bun styling.</p>
+            <span class="card-category">MAIN WEDDING</span>
+            <h3 class="card-title">HD Royal Bridal Package</h3>
+            <p class="card-desc">Waterproof 4K makeup, false lashes, hair extensions, dupatta setting, and jewelry placement.</p>
             <div class="card-footer">
-              <span class="card-price">₹28,000</span>
-              <a href="booking.html?service=HD%20Bridal%20Makeup" class="btn btn-gold btn-sm">Book Trial</a>
+              <div>
+                <span class="card-price">₹28,000</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">240 mins</span>
+              </div>
+              <a href="booking.html?service=hd-bridal" class="btn btn-gold btn-sm">Book Bridal</a>
             </div>
           </div>
         </div>
 
-        <!-- Bridal 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="4K Airbrush Temple Bridal Look" data-placeholder="INDIAN_SOUTH_BRIDE_MODEL">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Engagement & Sagan Makeup">
           </div>
           <div class="card-body">
-            <h3 class="card-title">4K Airbrush Temple Bridal</h3>
-            <p class="card-desc">Featherlight 4K airbrush application, traditional South Indian Kanjeevaram saree draping, fresh jasmine hair braid.</p>
+            <span class="card-category">PRE-WEDDING</span>
+            <h3 class="card-title">Sagan & Engagement Glam</h3>
+            <p class="card-desc">Soft romantic makeup, voluminous soft waves, saree/lehenga draping for sangeet or engagement.</p>
             <div class="card-footer">
-              <span class="card-price">₹32,000</span>
-              <a href="booking.html?service=Airbrush%20Bridal" class="btn btn-gold btn-sm">Book Trial</a>
+              <div>
+                <span class="card-price">₹16,500</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">150 mins</span>
+              </div>
+              <a href="booking.html?service=engagement-glam" class="btn btn-gold btn-sm">Book Glam</a>
             </div>
           </div>
         </div>
 
-        <!-- Bridal 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Engagement Look" data-placeholder="INDIAN_ENGAGEMENT_MODEL">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Maharajah Groom Grooming">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Sagan & Engagement Glam Look</h3>
-            <p class="card-desc">Soft pastel dewy skin, romantic hollywood waves or textured updo, soft glam eye makeup & gown/lehenga setting.</p>
+            <span class="card-category">GROOM STUDIO</span>
+            <h3 class="card-title">Maharajah Groom Package</h3>
+            <p class="card-desc">High-definition HD skin corrector, sharp beard sculpting, royal scalp massage, and haircut.</p>
             <div class="card-footer">
-              <span class="card-price">₹18,000</span>
-              <a href="booking.html?service=Engagement%20Makeup" class="btn btn-gold btn-sm">Book Trial</a>
+              <div>
+                <span class="card-price">₹14,999</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">180 mins</span>
+              </div>
+              <a href="booking.html?service=groom-pkg" class="btn btn-gold btn-sm">Book Groom</a>
             </div>
           </div>
         </div>
@@ -164,123 +176,73 @@
     </div>
   </section>
 
-  <!-- Pre-Bridal Packages Spotlight -->
-  <section class="section section-elevated">
+  <!-- Bridal FAQs Accordion -->
+  <section class="section section-light">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal">
-        <span class="section-tag">PRE-BRIDAL PREPARATION</span>
-        <h2 class="section-title">Pre-Bridal Radiance Rituals</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Designed to give you luminous glowing skin and nourished hair weeks before your wedding.</p>
+      <div class="section-header">
+        <span class="section-tag">BRIDAL FAQs</span>
+        <h2 class="section-title">Frequently Asked Bridal Questions</h2>
       </div>
 
-      <div class="grid-2">
-        <!-- Package 1 -->
-        <div class="package-card card reveal reveal-delay-1">
-          <div>
-            <h3 style="font-size: 1.8rem; color: var(--gold-primary);">1-Month Bridal Glow Package</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Essential Pre-Wedding Care</p>
-            <div style="margin: 1.25rem 0;">
-              <span style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-white); font-weight: 700;">₹24,999</span>
-              <span style="color: var(--text-muted); text-decoration: line-through; margin-left: 0.5rem;">₹32,000</span>
-            </div>
-            <div class="package-features">
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> 2x Saffron 24K Gold Facials</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> Full Body Rica Waxing & Body Polish</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> Olaplex Hair Spa & Trim</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> O.P.I Luxury Manicure & Pedicure</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> Free Bridal Makeup Trial Session</div>
-            </div>
+      <div class="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header">How far in advance should I book my bridal date? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>During peak Indian wedding seasons (October through March), we recommend locking your bridal artist and suite 3 to 6 months in advance.</p>
           </div>
-          <a href="booking.html?package=1-Month%20Bridal" class="btn btn-gold" style="width: 100%;">Book Package</a>
         </div>
 
-        <!-- Package 2 -->
-        <div class="package-card card featured reveal reveal-delay-2">
-          <span class="package-ribbon">COMPLETE TRANSFORM</span>
-          <div>
-            <h3 style="font-size: 1.8rem; color: var(--gold-primary);">3-Month Royal Wedding Readiness</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Comprehensive Head-to-Toe Transformation</p>
-            <div style="margin: 1.25rem 0;">
-              <span style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-white); font-weight: 700;">₹45,000</span>
-              <span style="color: var(--text-muted); text-decoration: line-through; margin-left: 0.5rem;">₹60,000</span>
-            </div>
-            <div class="package-features">
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> 4x Customized Medi-Facials & Skin Peels</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> Keratin or Cysteine Hair Smoothening</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> 2x Full Body Exfoliating Polishing</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> 2x Gel Nail Extensions & Pedicure Spa</div>
-              <div class="package-feature-item"><i class="fa-solid fa-check text-gold"></i> VIP Private Suite Reserved on Wedding Day</div>
-            </div>
-          </div>
-          <a href="booking.html?package=3-Month%20Bridal" class="btn btn-gold" style="width: 100%;">Book Package</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Royal Groom Grooming Section -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="grid-2" style="align-items: center;">
-        <div class="reveal">
-          <span class="section-tag">FOR THE MODERN GROOM</span>
-          <h2 class="section-title">Royal Groom Grooming & Styling</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-            Because the Indian groom deserves equal royal pampering. Our groom sanctuary packages include charcoal detox facials, beard sculpting, hair setting, and relaxing head massage.
-          </p>
-          <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <h4 style="font-size: 1.2rem; color: var(--gold-primary);">Maharajah Groom Package</h4>
-              <span style="font-size: 1.4rem; color: var(--text-white); font-weight: 700;">₹14,999</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-secondary);">Charcoal Facial + Royal Hair Cut & Color + Beard Styling + Head Spa + Wedding Day Hair & Safa Setting.</p>
-          </div>
-          <a href="booking.html?package=Maharajah%20Groom" class="btn btn-gold">Book Groom Package</a>
-        </div>
-
-        <div class="reveal reveal-delay-2">
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-gold-glow);">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Royal Indian Groom Styling">
+        <div class="accordion-item">
+          <button class="accordion-header">Do you travel to outstation wedding venues? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Yes. Our senior bridal artists and team travel across India and internationally for destination weddings. Outstation travel and stay terms are provided upon inquiry.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Global Corporate Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">AG</div>
-            <div>AURA & GOLD <span class="logo-sub">Royal Salon & Spa</span></div>
-          </a>
-          <p>India's leading bridal studio chain.</p>
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
+          </div>
+          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
         </div>
         <div class="footer-col">
-          <h4>Studio Services</h4>
+          <h4>Navigation</h4>
           <div class="footer-links">
-            <a href="bridal-makeup.html">Bridal Makeup</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="stylists.html">Master Stylists</a>
+            <a href="packages.html">Packages</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <div class="footer-links">
             <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Medi-Facials</a>
+            <a href="beauty-skin.html">Skincare</a>
+            <a href="spa-wellness.html">Ayurvedic Spa</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Packages</h4>
+          <h4>Contact</h4>
           <div class="footer-links">
-            <a href="packages.html">All Packages</a>
-            <a href="offers.html">Festive Offers</a>
-            <a href="booking.html">Book Trial</a>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
           </div>
-        </div>
-        <div class="footer-col">
-          <h4>Bridal Desk</h4>
-          <p>+91 98765 43210</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AURA & GOLD Luxury Salons & Spa Pvt Ltd.</p>
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
