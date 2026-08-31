@@ -75,11 +75,13 @@
 
   <!-- Page Hero -->
   <section class="page-hero">
-    <div class="container">
+    <div class="container reveal">
       <div class="breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <span>Contact</span>
       </div>
-      <h1 class="page-hero-title">Contact & Sanctuary Locations</h1>
+      <h1 class="page-hero-title">
+        <span class="line-mask-wrap"><span class="line-mask-text">Contact & Sanctuary Locations</span></span>
+      </h1>
       <p class="page-hero-desc">Have questions regarding bridal party bookings, outstation appointments, or corporate passes? Connect with our concierge team.</p>
     </div>
   </section>
@@ -89,7 +91,7 @@
     <div class="container">
       <div class="grid-2">
         <!-- Contact Form -->
-        <div style="background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.25rem;">
+        <div class="reveal reveal-delay-1" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.25rem;">
           <h2 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1.5rem;">Send an Inquiry</h2>
 
           <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('contactSuccessMsg').style.display='block'; this.reset();">

@@ -230,24 +230,28 @@
     </div>
   </section>
 
-  <!-- 7. BEFORE & AFTER SHOWCASE -->
+  <!-- 7. BEFORE & AFTER SHOWCASE (INTERACTIVE DRAG SLIDER) -->
   <section class="section section-warm">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">REAL RESULTS</span>
-        <h2 class="section-title">Before & After Transformation</h2>
-        <p class="section-subtitle">Authentic client results photographed in our salon lighting.</p>
+        <h2 class="section-title">Interactive Before & After Transformation</h2>
+        <p class="section-subtitle">Drag the gold handle left or right to compare natural hair/skin vs finished salon transformation.</p>
       </div>
 
-      <div class="grid-2" style="max-width: 900px; margin: 0 auto; gap: 1.5rem;">
-        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; text-align: center;">
-          <img id="beforeImg" src="" alt="Before Treatment" style="width: 100%; height: 360px; object-fit: cover;">
-          <div style="padding: 1rem; font-weight: 600; font-size: 0.9rem; color: var(--text-muted);" id="beforeLabel">Natural Dark Base</div>
+      <div class="ba-slider-container">
+        <div class="ba-image ba-before-img">
+          <img id="beforeImg" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=80" alt="Before Treatment">
+          <span class="ba-label ba-label-before" id="beforeLabel">Before (Natural Base)</span>
         </div>
-        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; text-align: center;">
-          <img id="afterImg" src="" alt="After Treatment" style="width: 100%; height: 360px; object-fit: cover;">
-          <div style="padding: 1rem; font-weight: 600; font-size: 0.9rem; color: var(--accent-gold);" id="afterLabel">After Caramel Balayage</div>
+        <div class="ba-image ba-after-img">
+          <img id="afterImg" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80" alt="After Treatment">
+          <span class="ba-label ba-label-after" id="afterLabel">After Salon Finish</span>
         </div>
+        <div class="ba-handle">
+          <div class="ba-handle-btn"><i class="fa-solid fa-arrows-left-right"></i></div>
+        </div>
+        <input type="range" min="0" max="100" value="50" class="ba-range-input" aria-label="Before and After Slider">
       </div>
     </div>
   </section>
