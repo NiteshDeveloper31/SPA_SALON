@@ -1354,17 +1354,24 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   Comprehensive Responsive Breakpoints (1440px -> 1280px -> 1024px -> 768px -> 390px -> 375px -> 320px)
+   Comprehensive Responsive Breakpoints (1440px -> 1280px -> 1200px -> 768px -> 390px -> 375px -> 320px)
    -------------------------------------------------------------------------- */
 
-@media (max-width: 1280px) {
+@media (max-width: 1400px) {
+  .nav-menu { gap: 1.15rem; }
+  .nav-link { font-size: 0.82rem; }
+}
+
+@media (max-width: 1200px) {
+  .nav-menu { display: none !important; }
+  .mobile-toggle { display: block !important; }
+  .nav-actions .btn-sm { display: none; }
   .container { max-width: 1140px; }
-  .hero-slide-title { font-size: 3.5rem; }
+  .hero-slide-title { font-size: 3.2rem; }
 }
 
 @media (max-width: 1024px) {
   .container { padding: 0 1.5rem; }
-  .nav-menu { gap: 1.5rem; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
   .feature-split { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1376,8 +1383,6 @@ ul, ol {
 @media (max-width: 768px) {
   .container { padding: 0 1.25rem; }
   .section { padding: 3.5rem 0; }
-  .nav-menu { display: none; }
-  .mobile-toggle { display: block; }
 
   /* Hero Slider Mobile */
   .hero-slider-wrap {
