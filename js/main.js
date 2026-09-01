@@ -1,19 +1,20 @@
 /* ==========================================================================
    AURA & GOLD — Royal Indian Salon & Spa
-   Commercial Application Logic & Interactive Outlets Engine
+   Main Application & Interactive Engine
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initNavbar();
+  initHeader();
+  initHeroSlider();
+  initSearchModal();
+  initPricingTabs();
   initMobileDrawer();
   initAccordions();
-  initActiveNavLink();
-  initOutletsMap();
-  initServiceFilters();
+  initLeafletMap();
 });
 
-/* Sticky Header on Scroll */
-function initNavbar() {
+/* 1. Header Scroll Shrink & Transition */
+function initHeader() {
   const header = document.querySelector('.header');
   if (!header) return;
 
@@ -26,36 +27,114 @@ function initNavbar() {
   });
 }
 
-/* Mobile Navigation Drawer */
+/* 2. VLS-Style Hero Banner Slider Rotation */
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+  let slideInterval;
+
+  function goToSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      goToSlide(currentSlide + 1);
+    }, 6000);
+  }
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      goToSlide(idx);
+      startAutoSlide();
+    });
+  });
+
+  goToSlide(0);
+  startAutoSlide();
+}
+
+/* 3. Search Modal Toggle */
+function initSearchModal() {
+  const searchTriggers = document.querySelectorAll('.search-trigger');
+  const searchModal = document.getElementById('searchModal');
+  const searchClose = document.getElementById('searchClose');
+
+  if (!searchModal) return;
+
+  searchTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      searchModal.classList.add('active');
+      const input = searchModal.querySelector('.search-input');
+      if (input) setTimeout(() => input.focus(), 200);
+    });
+  });
+
+  if (searchClose) {
+    searchClose.addEventListener('click', () => {
+      searchModal.classList.remove('active');
+    });
+  }
+}
+
+/* 4. Tabbed Pricing Menu Controller */
+function initPricingTabs() {
+  const tabBtns = document.querySelectorAll('.pricing-tab-btn');
+  const panels = document.querySelectorAll('.pricing-table-panel');
+
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetCategory = btn.getAttribute('data-tab');
+
+      tabBtns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetPanel = document.getElementById(`pricing-${targetCategory}`);
+      if (targetPanel) targetPanel.classList.add('active');
+    });
+  });
+}
+
+/* 5. Mobile Drawer Navigation */
 function initMobileDrawer() {
   const toggleBtn = document.querySelector('.mobile-toggle');
-  const closeBtn = document.querySelector('.drawer-close');
   const drawer = document.querySelector('.mobile-drawer');
   const backdrop = document.querySelector('.backdrop-overlay');
+  const closeBtn = document.querySelector('.drawer-close');
 
-  if (!toggleBtn || !drawer) return;
+  if (!toggleBtn || !drawer || !backdrop) return;
 
   function openDrawer() {
-    drawer.classList.add('open');
-    if (backdrop) backdrop.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    drawer.classList.add('active');
+    backdrop.classList.add('active');
   }
 
   function closeDrawer() {
-    drawer.classList.remove('open');
-    if (backdrop) backdrop.classList.remove('active');
-    document.body.style.overflow = '';
+    drawer.classList.remove('active');
+    backdrop.classList.remove('active');
   }
 
   toggleBtn.addEventListener('click', openDrawer);
+  backdrop.addEventListener('click', closeDrawer);
   if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (backdrop) backdrop.addEventListener('click', closeDrawer);
 }
 
-/* FAQ Accordion Toggle */
+/* 6. Accordion Toggle */
 function initAccordions() {
   const accordionItems = document.querySelectorAll('.accordion-item');
-  if (!accordionItems.length) return;
 
   accordionItems.forEach(item => {
     const header = item.querySelector('.accordion-header');
@@ -63,9 +142,7 @@ function initAccordions() {
 
     header.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-
       accordionItems.forEach(i => i.classList.remove('active'));
-
       if (!isActive) {
         item.classList.add('active');
       }
@@ -73,130 +150,44 @@ function initAccordions() {
   });
 }
 
-/* Highlight Current Active Nav Link */
-function initActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link, .drawer-link');
-
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
-}
-
-/* Interactive Leaflet Outlets Map & Tab Selector */
-function initOutletsMap() {
+/* 7. Leaflet Outlets Map */
+function initLeafletMap() {
   const mapElement = document.getElementById('leafletMap');
   if (!mapElement || typeof L === 'undefined') return;
 
-  // 4 Flagship Metro Outlets Data
-  const outletsData = {
-    mumbai: {
-      name: 'Mumbai — Bandra West Sanctuary',
-      lat: 19.0600,
-      lng: 72.8300,
-      address: 'Waterfield Road, Bandra West, Mumbai, Maharashtra 400050',
-      phone: '+91 98765 43210',
-      hours: 'Mon – Sun: 09:00 AM – 09:00 PM',
-      directions: 'https://maps.google.com/?q=Bandra+West+Mumbai'
-    },
-    delhi: {
-      name: 'New Delhi — Connaught Place Sanctuary',
-      lat: 28.6315,
-      lng: 77.2167,
-      address: 'Block M, Outer Circle, Connaught Place, New Delhi 110001',
-      phone: '+91 98765 43211',
-      hours: 'Mon – Sun: 09:30 AM – 09:00 PM',
-      directions: 'https://maps.google.com/?q=Connaught+Place+New+Delhi'
-    },
-    bengaluru: {
-      name: 'Bengaluru — Indiranagar Sanctuary',
-      lat: 12.9784,
-      lng: 77.6408,
-      address: '100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038',
-      phone: '+91 98765 43212',
-      hours: 'Mon – Sun: 09:00 AM – 09:00 PM',
-      directions: 'https://maps.google.com/?q=Indiranagar+Bengaluru'
-    },
-    hyderabad: {
-      name: 'Hyderabad — Jubilee Hills Sanctuary',
-      lat: 17.4319,
-      lng: 78.4071,
-      address: 'Road No. 36, Opposite Metro Pillar 165, Jubilee Hills, Hyderabad 500033',
-      phone: '+91 98765 43213',
-      hours: 'Mon – Sun: 09:30 AM – 09:00 PM',
-      directions: 'https://maps.google.com/?q=Jubilee+Hills+Hyderabad'
-    }
+  const outlets = {
+    mumbai: { lat: 19.0600, lng: 72.8300, title: 'Mumbai — Bandra West Sanctuary' },
+    delhi: { lat: 28.6315, lng: 77.2167, title: 'New Delhi — Connaught Place' },
+    bengaluru: { lat: 12.9784, lng: 77.6408, title: 'Bengaluru — Indiranagar' },
+    hyderabad: { lat: 17.4319, lng: 78.4071, title: 'Hyderabad — Jubilee Hills' }
   };
 
-  // Initialize Leaflet Map
-  const map = L.map('leafletMap', { scrollWheelZoom: false }).setView([19.0600, 72.8300], 13);
+  const map = L.map('leafletMap', { scrollWheelZoom: false }).setView([outlets.mumbai.lat, outlets.mumbai.lng], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
   const markers = {};
-
-  // Add markers for all 4 outlets
-  Object.keys(outletsData).forEach(key => {
-    const item = outletsData[key];
-    const marker = L.marker([item.lat, item.lng]).addTo(map);
-    marker.bindPopup(`<strong>${item.name}</strong><br>${item.address}`);
-    markers[key] = marker;
+  Object.keys(outlets).forEach(key => {
+    const item = outlets[key];
+    markers[key] = L.marker([item.lat, item.lng]).addTo(map).bindPopup(`<strong>${item.title}</strong>`);
   });
 
-  // Outlet Tab Click Listeners
-  const outletTabs = document.querySelectorAll('.outlet-tab');
-  const addressEl = document.getElementById('outletDisplayAddress');
-  const phoneEl = document.getElementById('outletDisplayPhone');
-  const hoursEl = document.getElementById('outletDisplayHours');
-  const directionsEl = document.getElementById('outletDisplayDirections');
+  markers.mumbai.openPopup();
+  setTimeout(() => map.invalidateSize(), 300);
 
-  outletTabs.forEach(tab => {
+  const tabs = document.querySelectorAll('.outlet-tab');
+  tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const key = tab.getAttribute('data-outlet');
-      const data = outletsData[key];
-      if (!data) return;
-
-      outletTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      map.flyTo([data.lat, data.lng], 14, { duration: 1.2 });
-      markers[key].openPopup();
-
-      if (addressEl) addressEl.textContent = data.address;
-      if (phoneEl) phoneEl.textContent = data.phone;
-      if (hoursEl) hoursEl.textContent = data.hours;
-      if (directionsEl) directionsEl.href = data.directions;
-    });
-  });
-}
-
-/* Service Category Filter Tabs */
-function initServiceFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
-  const cards = document.querySelectorAll('.filter-card');
-
-  if (!filterBtns.length || !cards.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      cards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      const outletKey = tab.getAttribute('data-outlet');
+      if (outlets[outletKey]) {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const pos = outlets[outletKey];
+        map.flyTo([pos.lat, pos.lng], 14, { duration: 1.2 });
+        markers[outletKey].openPopup();
+      }
     });
   });
 }

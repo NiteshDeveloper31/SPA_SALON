@@ -402,7 +402,7 @@ const servicesData = {
     categoryCode: 'bridal',
     name: 'HD Royal Bridal Package',
     tagline: 'Complete 4K airbrush bridal makeup, saree/dupatta draping, and hair styling for your wedding day.',
-    heroImage: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=80',
     price: 28000,
     priceDisplay: '₹28,000 onwards',
     duration: '240 mins',
@@ -440,7 +440,7 @@ const servicesData = {
       'Complete stress-free pampering in a private suite'
     ],
 
-    beforeImg: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
+    beforeImg: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80',
     afterImg: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80',
     beforeLabel: 'Natural Skin Prep',
     afterLabel: 'After HD Royal Bridal Finish',
@@ -479,7 +479,7 @@ const servicesData = {
     ],
 
     gallery: [
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80',
       'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80'
     ],
 

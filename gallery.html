@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visual Portfolio & Gallery — AURA & GOLD Salon</title>
-  <meta name="description" content="Explore our visual portfolio featuring luxury salon interiors, HD bridal transformations, balayage hair art, and spa sanctuaries.">
+  <title>Visual Portfolio & Architecture — AURA & GOLD Salon</title>
+  <meta name="description" content="Explore photography from our flagship sanctuaries, hair color transformations, skincare suites, and bridal styling.">
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- Header Navigation -->
+  <!-- Global Header Navigation -->
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -37,21 +37,21 @@
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="stylists.html" class="nav-link">Stylists</a>
-        <a href="packages.html" class="nav-link">Packages</a>
-        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="packages.html" class="nav-link">Membership</a>
         <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="blog.html" class="nav-link">Journal</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="icon-btn search-trigger" aria-label="Search Treatments"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="booking.html" class="btn btn-bronze btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
         <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer">
     <div>
       <div class="drawer-header">
@@ -65,13 +65,24 @@
         <a href="index.html" class="drawer-link">Home</a>
         <a href="about.html" class="drawer-link">About Us</a>
         <a href="services.html" class="drawer-link">All Services Menu</a>
+        <a href="packages.html" class="drawer-link">Wellness Membership</a>
         <a href="gallery.html" class="drawer-link active">Visual Gallery</a>
+        <a href="blog.html" class="drawer-link">Wellness Journal</a>
         <a href="contact.html" class="drawer-link">Contact & Outlets</a>
       </div>
     </div>
-    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+    <a href="booking.html" class="btn btn-bronze" style="width: 100%;">Book Appointment</a>
   </div>
   <div class="backdrop-overlay"></div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal" id="searchModal">
+    <button class="search-close" id="searchClose" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+    <div class="search-box-wrap">
+      <span class="eyebrow">EXPLORE OUR SANCTUARY</span>
+      <input type="text" class="search-input" placeholder="Search treatments, balayage, facials, spa...">
+    </div>
+  </div>
 
   <!-- Page Hero -->
   <section class="page-hero">
@@ -122,8 +133,8 @@
         </div>
 
         <!-- Item 3 -->
-        <div class="gallery-item card img-zoom-wrap" data-category="skin" style="cursor: pointer;">
-          <div class="card-img-wrap" style="padding-top: 75%;">
+        <div class="gallery-item card reveal reveal-delay-3" data-category="skin" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
             <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="24K Saffron Facial Suite">
           </div>
           <div style="padding: 1rem; text-align: center;">
@@ -132,8 +143,8 @@
         </div>
 
         <!-- Item 4 -->
-        <div class="gallery-item card img-zoom-wrap" data-category="spa" style="cursor: pointer;">
-          <div class="card-img-wrap" style="padding-top: 75%;">
+        <div class="gallery-item card reveal reveal-delay-1" data-category="spa" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
             <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Ayurvedic Abhyanga Spa Suite">
           </div>
           <div style="padding: 1rem; text-align: center;">
@@ -142,9 +153,9 @@
         </div>
 
         <!-- Item 5 -->
-        <div class="gallery-item card img-zoom-wrap" data-category="bridal" style="cursor: pointer;">
-          <div class="card-img-wrap" style="padding-top: 75%;">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="HD Royal Bridal Makeup Transformation">
+        <div class="gallery-item card reveal reveal-delay-2" data-category="bridal" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80" alt="HD Royal Bridal Makeup Transformation">
           </div>
           <div style="padding: 1rem; text-align: center;">
             <h4 class="gallery-title" style="font-family: var(--font-serif); font-size: 1.1rem;">HD Royal Bridal Look</h4>
@@ -152,8 +163,8 @@
         </div>
 
         <!-- Item 6 -->
-        <div class="gallery-item card img-zoom-wrap" data-category="salon" style="cursor: pointer;">
-          <div class="card-img-wrap" style="padding-top: 75%;">
+        <div class="gallery-item card reveal reveal-delay-3" data-category="salon" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
             <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="Styling Stations and Mirrors">
           </div>
           <div style="padding: 1rem; text-align: center;">
@@ -173,28 +184,31 @@
             <div class="logo-badge">AG</div>
             <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
           </div>
-          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
+          <p>India's premier luxury salon and wellness spa sanctuary. Delivering master hair color artistry, clinical skincare, and Ayurvedic body therapies.</p>
         </div>
+
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Explore</h4>
           <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services Menu</a>
-            <a href="stylists.html">Master Stylists</a>
-            <a href="packages.html">Packages</a>
-            <a href="contact.html">Contact</a>
+            <a href="packages.html">Membership</a>
+            <a href="gallery.html">Visual Gallery</a>
+            <a href="blog.html">Wellness Journal</a>
           </div>
         </div>
+
         <div class="footer-col">
-          <h4>Specialties</h4>
+          <h4>Treatments</h4>
           <div class="footer-links">
             <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skincare</a>
+            <a href="beauty-skin.html">Skincare & Facials</a>
             <a href="spa-wellness.html">Ayurvedic Spa</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Contact</h4>
           <div class="footer-links">
@@ -203,6 +217,7 @@
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>

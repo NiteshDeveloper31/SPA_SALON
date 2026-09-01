@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wellness Journal — AURA & GOLD Luxury Salon & Spa</title>
+  <meta name="description" content="Editorial wellness articles, scalp diagnostic advice, hair color maintenance guides, and skincare insights from our master art directors.">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">AG</div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">AURA & GOLD</span>
+          <span class="logo-sub">Salon & Wellness Spa</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fa-solid fa-angle-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html">All Treatments Menu</a>
+            <a href="hair-services.html">Hair Studio & Color</a>
+            <a href="beauty-skin.html">Beauty & Medi-Skin</a>
+            <a href="spa-wellness.html">Ayurvedic Spa & Wellness</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
+          </div>
+        </div>
+        <a href="packages.html" class="nav-link">Membership</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link active">Journal</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn search-trigger" aria-label="Search Treatments"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="booking.html" class="btn btn-bronze btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="logo">
+          <div class="logo-badge">AG</div>
+          <span class="logo-title" style="font-size: 1.1rem;">AURA & GOLD</span>
+        </div>
+        <button class="drawer-close" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-menu">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="services.html" class="drawer-link">All Treatments Menu</a>
+        <a href="packages.html" class="drawer-link">Wellness Membership</a>
+        <a href="blog.html" class="drawer-link active">Wellness Journal</a>
+        <a href="contact.html" class="drawer-link">Contact & Outlets</a>
+      </div>
+    </div>
+    <a href="booking.html" class="btn btn-bronze" style="width: 100%;">Book Appointment</a>
+  </div>
+  <div class="backdrop-overlay"></div>
+
+  <!-- Page Hero -->
+  <section class="section section-stone" style="padding-top: calc(var(--header-height) + 3rem); padding-bottom: 4rem;">
+    <div class="container text-center">
+      <span class="eyebrow">EDITORIAL INSIGHTS</span>
+      <h1 class="section-title" style="font-size: 3.5rem;">The Wellness Journal</h1>
+      <p class="section-subtitle" style="margin: 0 auto;">Expert guidance on scalp health, Ayurvedic oil mixology, clinical skin therapies, and post-treatment home care.</p>
+    </div>
+  </section>
+
+  <!-- Featured Article Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="feature-split" style="background-color: var(--bg-main); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 3rem;">
+        <div class="feature-img-wrap img-clip-sweep reveal">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80" alt="Ayurvedic Abhyanga Massage Therapy">
+        </div>
+        <div class="feature-content reveal reveal-delay-1">
+          <span class="eyebrow">FEATURED ARTICLE</span>
+          <h2 class="section-title">How Often Should You Get an Abhyanga Massage?</h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem;">Understanding the muscular, nervous system, and lymphatic benefits of bi-weekly warm herbal oil body massage. We break down the clinical science behind Dhanwantharam oil absorption.</p>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem;">By Dr. Radhika Nair • 6 Min Read • Ayurvedic Spa Category</div>
+          <a href="#" class="btn btn-bronze">Read Full Journal Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal Articles Grid -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="grid-3">
+        <!-- Article 1 -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" alt="24K Gold vs Hydra Facial Guide">
+          </div>
+          <div class="card-body">
+            <span class="card-category">CLINICAL SKINCARE</span>
+            <h3 class="card-title">24K Gold vs Hydra-Dermabrasion: Which Facial is Best?</h3>
+            <p class="card-desc">A comparative guide for treating sun tan, hyperpigmentation, and dehydration in Indian skin tones.</p>
+            <div class="card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-muted);">5 Min Read</span>
+              <a href="#" class="btn btn-outline btn-sm">Read Article</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80" alt="Balayage Aftercare Routine">
+          </div>
+          <div class="card-body">
+            <span class="card-category">HAIR STUDIO</span>
+            <h3 class="card-title">Maintaining French Balayage on Dark Indian Hair</h3>
+            <p class="card-desc">Sulfate-free shampoos, toner glosses, and heat protection routines to prevent brassiness.</p>
+            <div class="card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-muted);">4 Min Read</span>
+              <a href="#" class="btn btn-outline btn-sm">Read Article</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="card reveal reveal-delay-3">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=80" alt="Pre-Bridal Skincare Timeline">
+          </div>
+          <div class="card-body">
+            <span class="card-category">BRIDAL STUDIO</span>
+            <h3 class="card-title">The Ultimate 30-Day Pre-Bridal Skin & Hair Prep Timeline</h3>
+            <p class="card-desc">Week-by-week treatments to ensure your skin is radiant and 4K airbrush ready for wedding functions.</p>
+            <div class="card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-muted);">7 Min Read</span>
+              <a href="#" class="btn btn-outline btn-sm">Read Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Corporate Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-badge">AG</div>
+            <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
+          </div>
+          <p>India's premier luxury salon and wellness spa sanctuary. Delivering master hair color artistry, clinical skincare, and Ayurvedic body therapies.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services Menu</a>
+            <a href="packages.html">Membership</a>
+            <a href="gallery.html">Visual Gallery</a>
+            <a href="blog.html">Wellness Journal</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Treatments</h4>
+          <div class="footer-links">
+            <a href="hair-services.html">Hair Studio</a>
+            <a href="beauty-skin.html">Skincare & Facials</a>
+            <a href="spa-wellness.html">Ayurvedic Spa</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AURA & GOLD — Premium Salon, Skincare & Luxury Spa</title>
-  <meta name="description" content="India's premier luxury salon and wellness spa. Experience professional hair coloring, Ayurvedic skincare, and HD bridal makeup across Mumbai, New Delhi, Bengaluru, and Hyderabad.">
+  <title>AURA & GOLD — Royal Indian Salon & Wellness Spa</title>
+  <meta name="description" content="Discover India's flagship luxury salon & spa sanctuary. Bespoke French Balayage, 24K Kashmiri Saffron Facials, Kerala Abhyanga Massages, and HD Bridal Artistry.">
   
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,21 +38,21 @@
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="stylists.html" class="nav-link">Stylists</a>
-        <a href="packages.html" class="nav-link">Packages</a>
-        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="packages.html" class="nav-link">Membership</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link">Journal</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="icon-btn search-trigger" aria-label="Search Treatments"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="booking.html" class="btn btn-bronze btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
         <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer">
     <div>
       <div class="drawer-header">
@@ -68,141 +65,207 @@
       <div class="drawer-menu">
         <a href="index.html" class="drawer-link active">Home</a>
         <a href="about.html" class="drawer-link">About Us</a>
-        <a href="services.html" class="drawer-link">All Services Menu</a>
-        <a href="hair-services.html" class="drawer-link">Hair Studio & Balayage</a>
-        <a href="beauty-skin.html" class="drawer-link">Beauty & Skincare</a>
-        <a href="spa-wellness.html" class="drawer-link">Spa & Wellness</a>
-        <a href="bridal-makeup.html" class="drawer-link">Bridal Studio</a>
-        <a href="stylists.html" class="drawer-link">Our Master Stylists</a>
-        <a href="packages.html" class="drawer-link">Curated Packages</a>
-        <a href="offers.html" class="drawer-link">Promotions & Offers</a>
+        <a href="services.html" class="drawer-link">All Treatments Menu</a>
+        <a href="packages.html" class="drawer-link">Wellness Membership</a>
         <a href="gallery.html" class="drawer-link">Visual Gallery</a>
-        <a href="testimonials.html" class="drawer-link">Client Reviews</a>
+        <a href="blog.html" class="drawer-link">Wellness Journal</a>
         <a href="contact.html" class="drawer-link">Contact & Outlets</a>
       </div>
     </div>
-    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+    <a href="booking.html" class="btn btn-bronze" style="width: 100%;">Book Appointment</a>
   </div>
   <div class="backdrop-overlay"></div>
 
-  <!-- 1. Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content reveal">
-          <span class="hero-tag">AURA & GOLD SALON & SPA</span>
-          <h1 class="hero-title">
-            <span class="line-mask-wrap"><span class="line-mask-text">Modern Beauty.</span></span>
-            <span class="line-mask-wrap"><span class="line-mask-text" style="transition-delay: 0.15s;">Timeless Indian Elegance.</span></span>
-          </h1>
-          <p class="hero-desc">Experience master hair color design, restorative Ayurvedic skin therapies, and couture bridal makeup in our luxury sanctuaries across Mumbai, Delhi NCR, Bengaluru, and Hyderabad.</p>
-          <div class="hero-actions">
-            <a href="booking.html" class="btn btn-primary btn-lg">Book an Appointment</a>
-            <a href="services.html" class="btn btn-outline btn-lg">Explore Services</a>
+  <!-- Search Modal Overlay -->
+  <div class="search-modal" id="searchModal">
+    <button class="search-close" id="searchClose" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+    <div class="search-box-wrap">
+      <span class="eyebrow">EXPLORE OUR SANCTUARY</span>
+      <input type="text" class="search-input" placeholder="Search treatments, balayage, facials, spa...">
+      <p style="margin-top: 1.5rem; font-size: 0.88rem; color: var(--text-muted);">Popular searches: French Balayage, 24K Saffron Facial, Kerala Abhyanga, HD Bridal Package</p>
+    </div>
+  </div>
+
+  <!-- 1. VLS-Inspired Hero Banner Slider -->
+  <section class="hero-slider-wrap">
+    <!-- Slide 1 -->
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=80" alt="Luxury Spa Wellness Sanctuary" class="hero-slide-bg">
+      <div class="container">
+        <div class="hero-content-wrap">
+          <span class="eyebrow" style="color: #D5C3A5;">THE ART OF WELLNESS</span>
+          <h1 class="hero-slide-title">Where Beauty Meets Deep Relaxation</h1>
+          <p class="hero-slide-desc">Immerse yourself in authentic Kerala Ayurvedic warm oil massages, French hair color art, and clinical skin rejuvenation in our metro sanctuaries.</p>
+          <div class="hero-btn-group">
+            <a href="booking.html" class="btn btn-bronze btn-lg">Book Your Experience</a>
+            <a href="services.html" class="btn btn-outline-white btn-lg">Explore Treatments</a>
           </div>
         </div>
-        <div class="hero-img-wrap img-clip-sweep reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="AURA & GOLD Modern Luxury Salon Interior Architecture">
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1800&q=80" alt="French Balayage Hair Styling" class="hero-slide-bg">
+      <div class="container">
+        <div class="hero-content-wrap">
+          <span class="eyebrow" style="color: #D5C3A5;">YOUR BEAUTY, ELEVATED</span>
+          <h1 class="hero-slide-title">Master Hair Color & Bond Restoration</h1>
+          <p class="hero-slide-desc">Customized caramel balayage, organic keratin smoothening, and scalp diagnostic therapies by certified Art Directors.</p>
+          <div class="hero-btn-group">
+            <a href="booking.html?service=balayage" class="btn btn-bronze btn-lg">Reserve Hair Session</a>
+            <a href="hair-services.html" class="btn btn-outline-white btn-lg">Discover Hair Studio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1800&q=80" alt="HD Royal Bridal Makeup & Skincare" class="hero-slide-bg">
+      <div class="container">
+        <div class="hero-content-wrap">
+          <span class="eyebrow" style="color: #D5C3A5;">REST. RESET. RENEW.</span>
+          <h1 class="hero-slide-title">Couture Indian Bridal & Skincare</h1>
+          <p class="hero-slide-desc">24K Kashmiri saffron gold leaf facials, 14-hour airbrush bridal makeup, and pre-wedding bridal glow rituals.</p>
+          <div class="hero-btn-group">
+            <a href="booking.html?service=hd-bridal" class="btn btn-bronze btn-lg">Book Bridal Consultation</a>
+            <a href="bridal-makeup.html" class="btn btn-outline-white btn-lg">View Bridal Suite</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Controls -->
+    <div class="hero-slider-controls">
+      <div class="slider-dot active" data-slide="0"><div class="slider-dot-fill"></div></div>
+      <div class="slider-dot" data-slide="1"><div class="slider-dot-fill"></div></div>
+      <div class="slider-dot" data-slide="2"><div class="slider-dot-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- 2. Refined Trust Strip (01 - 05) -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-flex">
+        <div class="trust-item">
+          <span class="trust-num">01</span>
+          <div class="trust-info">
+            <h4>Certified Specialists</h4>
+            <p>London & Paris Academy Trained</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-num">02</span>
+          <div class="trust-info">
+            <h4>Organic Formulations</h4>
+            <p>100% Genuine Olaplex & Kérastase</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-num">03</span>
+          <div class="trust-info">
+            <h4>Personalized Rituals</h4>
+            <p>Detailed Consultation Included</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-num">04</span>
+          <div class="trust-info">
+            <h4>Private Suites</h4>
+            <p>Soundproof Treatment Rooms</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-num">05</span>
+          <div class="trust-info">
+            <h4>Seamless Booking</h4>
+            <p>Instant Confirmation & Reminders</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. Brand Introduction Section -->
-  <section class="section section-light">
+  <!-- 3. Editorial Brand Story -->
+  <section class="section section-warm">
     <div class="container">
       <div class="feature-split">
         <div class="feature-img-wrap img-clip-sweep reveal">
-          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="Master Hair Stylist Providing Personal Hair Consultation">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="AURA & GOLD Sanctuary Interior Architecture">
         </div>
         <div class="feature-content reveal reveal-delay-1">
-          <span class="section-tag">OUR PHILOSOPHY</span>
+          <span class="eyebrow">OUR PHILOSOPHY</span>
           <h2 class="section-title">
-            <span class="line-mask-wrap"><span class="line-mask-text">Crafted Beauty Services</span></span>
-            <span class="line-mask-wrap"><span class="line-mask-text" style="transition-delay: 0.12s;">Delivered with Care</span></span>
+            <span class="line-mask-wrap"><span class="line-mask-text">Wellness Isn't A Luxury.</span></span>
+            <span class="line-mask-wrap"><span class="line-mask-text" style="transition-delay: 0.12s;">It's A Ritual.</span></span>
           </h2>
-          <p>Founded in 2012, AURA & GOLD has redefined urban beauty care in India by blending international cosmetic techniques with time-tested Indian wellness rituals.</p>
-          <div class="feature-list">
-            <div class="feature-item"><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>Certified Art Directors</strong> trained at London & Paris beauty academies.</span></div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>100% Ammonia-Free Product Lines</strong> including Olaplex & Kérastase.</span></div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>Private Treatment Suites</strong> for bridal groups, couple spas, and skin consultations.</span></div>
-          </div>
-          <a href="about.html" class="btn btn-outline">Read Our Full Story</a>
+          <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">Founded in 2012, AURA & GOLD was conceived to bridge the gap between international cosmetic science and time-tested Indian wellness traditions.</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">We believe true beauty thrives when the mind and body are fully at rest. Every sanctuary is engineered as a peaceful refuge from urban congestion.</p>
+          <a href="about.html" class="btn btn-outline">Discover Our Full Story</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Service Categories Grid -->
-  <section class="section section-warm">
+  <!-- 4. Explore Our Treatments Grid -->
+  <section class="section section-light">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">EXPERT CATEGORIES</span>
-        <h2 class="section-title">Comprehensive Salon & Spa Care</h2>
-        <p class="section-subtitle">Discover our specialized beauty departments designed for Indian hair textures, skin tones, and lifestyle wellness.</p>
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">DISCOVER OUR MENU</span>
+        <h2 class="section-title">Explore Our Treatments</h2>
+        <p class="section-subtitle">Crafted specifically for Indian hair textures, dermal complexions, and holistic lifestyle restoration.</p>
       </div>
 
-      <div class="grid-4">
-        <!-- Category 1 -->
+      <div class="grid-3">
+        <!-- Item 1 -->
         <div class="card reveal reveal-delay-1">
           <div class="card-img-wrap img-clip-sweep">
-            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Professional Hair Balayage & Coloring">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=700&q=80" alt="Signature Ayurvedic Spa Massages">
           </div>
           <div class="card-body">
-            <span class="card-category">HAIR CARE & COLOR</span>
-            <h3 class="card-title">Hair Studio</h3>
-            <p class="card-desc">Bespoke balayage, organic keratin smoothening, precision haircuts, and bond repair spas.</p>
+            <span class="card-category">WELLNESS & SPA</span>
+            <h3 class="card-title">Ayurvedic Massages</h3>
+            <p class="card-desc">Traditional warm Dhanwantharam oil Abhyanga therapies and aromatherapy in soundproof suites.</p>
             <div class="card-footer">
-              <span class="card-price">From ₹1,800</span>
-              <a href="hair-services.html" class="btn btn-outline btn-sm">Explore Hair</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card-img-wrap img-clip-sweep">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Facial Skincare Treatment">
-          </div>
-          <div class="card-body">
-            <span class="card-category">SKIN & FACIALS</span>
-            <h3 class="card-title">Beauty & Skin</h3>
-            <p class="card-desc">24K Kashmiri saffron gold facials, hydra-dermabrasion, glycolic peels, and organic waxing.</p>
-            <div class="card-footer">
-              <span class="card-price">From ₹2,200</span>
-              <a href="beauty-skin.html" class="btn btn-outline btn-sm">Explore Skin</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card-img-wrap img-clip-sweep">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Ayurvedic Body Massage Therapy">
-          </div>
-          <div class="card-body">
-            <span class="card-category">WELLNESS & MASSAGE</span>
-            <h3 class="card-title">Spa & Wellness</h3>
-            <p class="card-desc">Traditional Abhyanga warm herbal oil massages, couple jacuzzi suites, and aroma hydrotherapy.</p>
-            <div class="card-footer">
-              <span class="card-price">From ₹3,500</span>
+              <span class="card-price">From ₹4,999</span>
               <a href="spa-wellness.html" class="btn btn-outline btn-sm">Explore Spa</a>
             </div>
           </div>
         </div>
 
-        <!-- Category 4 -->
-        <div class="card">
-          <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Indian Bridal Makeup Artistry">
+        <!-- Item 2 -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" alt="24K Gold Saffron Facial">
           </div>
           <div class="card-body">
-            <span class="card-category">BRIDAL & EVENTS</span>
-            <h3 class="card-title">Bridal Studio</h3>
-            <p class="card-desc">HD airbrush bridal makeup, saree draping, pre-wedding rituals, and Maharajah groom styling.</p>
+            <span class="card-category">CLINICAL SKINCARE</span>
+            <h3 class="card-title">Medi-Facials & Glow</h3>
+            <p class="card-desc">24K Kashmiri saffron gold leaf infusions, hydra-dermabrasion, and active glycolic peels.</p>
             <div class="card-footer">
-              <span class="card-price">From ₹14,999</span>
-              <a href="bridal-makeup.html" class="btn btn-outline btn-sm">Explore Bridal</a>
+              <span class="card-price">From ₹3,999</span>
+              <a href="beauty-skin.html" class="btn btn-outline btn-sm">Explore Skin</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="card reveal reveal-delay-3">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80" alt="French Caramel Balayage Hair Studio">
+          </div>
+          <div class="card-body">
+            <span class="card-category">HAIR STUDIO & COLOR</span>
+            <h3 class="card-title">Hair Studio & Balayage</h3>
+            <p class="card-desc">Bespoke French caramel balayage, formaldehyde-free keratin smoothening, and bond repair.</p>
+            <div class="card-footer">
+              <span class="card-price">From ₹2,500</span>
+              <a href="hair-services.html" class="btn btn-outline btn-sm">Explore Hair</a>
             </div>
           </div>
         </div>
@@ -210,100 +273,242 @@
     </div>
   </section>
 
-  <!-- 4. Featured Services Section -->
+  <!-- 5. Featured Treatment Showcase -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="feature-split featured-showcase-card">
+        <div class="feature-img-wrap img-clip-sweep reveal">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt="Signature French Caramel Balayage Transformation">
+        </div>
+        <div class="feature-content reveal reveal-delay-1">
+          <span class="eyebrow">SIGNATURE HIGHLIGHT</span>
+          <h2 class="section-title">French Caramel Balayage</h2>
+          <p class="showcase-desc">Hand-painted dimensional highlights customized to dark Indian hair bases (levels 1 to 3). Combined with Olaplex bond repair to ensure maximum shine and elasticity without brassiness.</p>
+          
+          <div class="showcase-meta-row">
+            <div>
+              <span class="showcase-meta-label">DURATION</span>
+              <strong class="showcase-meta-val">150 minutes</strong>
+            </div>
+            <div>
+              <span class="showcase-meta-label">STARTING PRICE</span>
+              <strong class="showcase-meta-price">₹8,499</strong>
+            </div>
+          </div>
+
+          <div class="showcase-btn-group">
+            <a href="service-details.html?service=balayage" class="btn btn-bronze">View Treatment Details</a>
+            <a href="booking.html?service=balayage" class="btn btn-outline">Book Experience</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Tabbed Service Pricing Menu -->
   <section class="section section-light">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">SIGNATURE MENU</span>
-        <h2 class="section-title">Most Requested Signature Treatments</h2>
-        <p class="section-subtitle">Client favorites crafted for high performance, radiant skin, and lasting hair health.</p>
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">TRANSPARENT PRICING</span>
+        <h2 class="section-title">Spa & Salon Treatment Menu</h2>
+        <p class="section-subtitle">Select a category tab below to view treatment durations and direct reservation options.</p>
+      </div>
+
+      <div class="pricing-tabs-wrap reveal">
+        <button class="pricing-tab-btn active" data-tab="massage">Spa & Massages</button>
+        <button class="pricing-tab-btn" data-tab="facials">Clinical Facials</button>
+        <button class="pricing-tab-btn" data-tab="hair">Hair & Color</button>
+        <button class="pricing-tab-btn" data-tab="bridal">Bridal Packages</button>
+      </div>
+
+      <!-- Panel 1: Massages -->
+      <div class="pricing-table-panel active" id="pricing-massage">
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">Kerala Abhyanga Warm Herbal Massage</h4>
+            <p class="pricing-desc">90 minutes of synchronized warm Dhanwantharam oil massage followed by steam.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">90 mins</span>
+            <span class="pricing-cost">₹4,999</span>
+            <a href="booking.html?service=abhyanga" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">Royal Couple Hydrotherapy Spa Suite</h4>
+            <p class="pricing-desc">120 minutes of joint relaxation including private jacuzzi soak and foot reflexology.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">120 mins</span>
+            <span class="pricing-cost">₹9,999</span>
+            <a href="booking.html?service=couple-spa" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">Swedish Essential Oil Deep Relaxation</h4>
+            <p class="pricing-desc">60 minutes of medium-pressure muscular release with organic lavender oils.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">60 mins</span>
+            <span class="pricing-cost">₹3,500</span>
+            <a href="booking.html?service=swedish" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Facials -->
+      <div class="pricing-table-panel" id="pricing-facials">
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">24K Kashmiri Saffron Kumkumadi Facial</h4>
+            <p class="pricing-desc">Pure edible 24K gold foil leaf massage with wild saffron extract for tan reduction.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">75 mins</span>
+            <span class="pricing-cost">₹4,499</span>
+            <a href="booking.html?service=saffron-facial" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">Hydra-Dermabrasion Oxygen Medi-Facial</h4>
+            <p class="pricing-desc">Vacuum pore extraction, glycolic peel, and hyaluronic acid jet infusion.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">60 mins</span>
+            <span class="pricing-cost">₹3,999</span>
+            <a href="booking.html?service=hydra-facial" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Hair -->
+      <div class="pricing-table-panel" id="pricing-hair">
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">French Caramel Balayage</h4>
+            <p class="pricing-desc">Custom hand-painted dimensional highlights with Olaplex bond repair.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">150 mins</span>
+            <span class="pricing-cost">₹8,499</span>
+            <a href="booking.html?service=balayage" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">Royal Keratin Smoothening</h4>
+            <p class="pricing-desc">100% formaldehyde-free protein smoothing that eliminates humidity frizz for 6 months.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">180 mins</span>
+            <span class="pricing-cost">₹6,999</span>
+            <a href="booking.html?service=keratin" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4: Bridal -->
+      <div class="pricing-table-panel" id="pricing-bridal">
+        <div class="pricing-row">
+          <div class="pricing-info">
+            <h4 class="pricing-name">HD Royal Bridal Package</h4>
+            <p class="pricing-desc">Complete 4K airbrush makeup, saree/dupatta draping, and hair styling.</p>
+          </div>
+          <div class="pricing-meta">
+            <span class="pricing-duration">240 mins</span>
+            <span class="pricing-cost">₹28,000</span>
+            <a href="booking.html?service=hd-bridal" class="btn btn-bronze btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Special Offer Editorial Banner -->
+  <section class="section section-dark" style="position: relative; overflow: hidden; padding: 7rem 0;">
+    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=80" alt="The Weekend Reset Spa Special Offer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; filter: brightness(0.6);">
+    <div class="container" style="position: relative; z-index: 2; max-width: 680px; text-align: center;">
+      <span class="eyebrow" style="color: var(--accent-bronze);">EXCLUSIVE PRIVILEGE</span>
+      <h2 style="font-family: var(--font-serif); font-size: 3.2rem; color: #FFFFFF; margin-bottom: 1rem;">The Weekend Couples Reset</h2>
+      <p style="color: var(--text-light-muted); font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6;">Enjoy 20% off our private hydrotherapy jacuzzi suite & 90-minute Kerala Abhyanga massage sessions when booked for two on Friday through Sunday.</p>
+      <a href="booking.html?offer=WEEKEND20" class="btn btn-bronze btn-lg">Reserve Couple Ritual</a>
+    </div>
+  </section>
+
+  <!-- 8. "THE WELLNESS CLUB" Membership Section -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">EXCLUSIVE ACCESS</span>
+        <h2 class="section-title">The Wellness Club Memberships</h2>
+        <p class="section-subtitle">Enjoy priority booking privileges, complimentary monthly therapies, and member-only pricing across all 4 flagship sanctuaries.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Featured Service 1 -->
-        <div class="card">
-          <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Signature Caramel Balayage Hair Color">
-          </div>
-          <div class="card-body">
-            <span class="card-category">HAIR STUDIO</span>
-            <h3 class="card-title">French Caramel Balayage</h3>
-            <p class="card-desc">Hand-painted seamless highlights customized for Indian dark hair bases with Olaplex bond protection.</p>
-            <div class="card-footer">
-              <div>
-                <span class="card-price">₹8,499</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">150 mins duration</span>
-              </div>
-              <div>
-                <a href="service-details.html?service=balayage" class="btn btn-outline btn-sm">View Details</a>
-                <a href="booking.html?service=balayage" class="btn btn-gold btn-sm">Book</a>
-              </div>
-            </div>
-          </div>
+        <!-- Plan 1 -->
+        <div class="membership-card reveal reveal-delay-1">
+          <h3 class="membership-name">Silver Access</h3>
+          <div class="membership-price">₹4,999 <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 400;">/ month</span></div>
+          <ul class="membership-features">
+            <li><i class="fa-solid fa-check text-gold"></i> 1x Monthly Signature Massage or Facial</li>
+            <li><i class="fa-solid fa-check text-gold"></i> 15% off all additional hair & skin services</li>
+            <li><i class="fa-solid fa-check text-gold"></i> Preferred weekend slot reservations</li>
+          </ul>
+          <a href="booking.html?plan=silver" class="btn btn-outline" style="width: 100%;">Join Silver Club</a>
         </div>
 
-        <!-- Featured Service 2 -->
-        <div class="card">
-          <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="24K Saffron Kumkumadi Facial Treatment">
-          </div>
-          <div class="card-body">
-            <span class="card-category">SKINCARE</span>
-            <h3 class="card-title">24K Saffron Kumkumadi Facial</h3>
-            <p class="card-desc">Pure edible 24K gold foil infusion with Kashmiri saffron oil to restore complexion glow and reduce pigmentation.</p>
-            <div class="card-footer">
-              <div>
-                <span class="card-price">₹4,499</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">75 mins duration</span>
-              </div>
-              <div>
-                <a href="service-details.html?service=saffron-facial" class="btn btn-outline btn-sm">View Details</a>
-                <a href="booking.html?service=saffron-facial" class="btn btn-gold btn-sm">Book</a>
-              </div>
-            </div>
-          </div>
+        <!-- Plan 2 (Recommended) -->
+        <div class="membership-card recommended reveal reveal-delay-2">
+          <div class="membership-badge">MOST POPULAR</div>
+          <h3 class="membership-name">Gold Royalty</h3>
+          <div class="membership-price">₹8,999 <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 400;">/ month</span></div>
+          <ul class="membership-features">
+            <li><i class="fa-solid fa-check text-gold"></i> 2x Monthly Massages or 24K Gold Facials</li>
+            <li><i class="fa-solid fa-check text-gold"></i> 25% off all hair studio & coloring sessions</li>
+            <li><i class="fa-solid fa-check text-gold"></i> Complimentary guest pass once per month</li>
+            <li><i class="fa-solid fa-check text-gold"></i> Free Olaplex bond repair add-ons</li>
+          </ul>
+          <a href="booking.html?plan=gold" class="btn btn-bronze" style="width: 100%;">Join Gold Royalty</a>
         </div>
 
-        <!-- Featured Service 3 -->
-        <div class="card">
-          <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Kerala Abhyanga Warm Ayurvedic Oil Spa">
-          </div>
-          <div class="card-body">
-            <span class="card-category">SPA & WELLNESS</span>
-            <h3 class="card-title">Royal Abhyanga Warm Herbal Oil Massage</h3>
-            <p class="card-desc">Traditional 90-minute full body massage using warm Kerala Dhanwantharam oil for deep muscular relaxation.</p>
-            <div class="card-footer">
-              <div>
-                <span class="card-price">₹4,999</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">90 mins duration</span>
-              </div>
-              <div>
-                <a href="service-details.html?service=abhyanga" class="btn btn-outline btn-sm">View Details</a>
-                <a href="booking.html?service=abhyanga" class="btn btn-gold btn-sm">Book</a>
-              </div>
-            </div>
-            </div>
-          </div>
+        <!-- Plan 3 -->
+        <div class="membership-card reveal reveal-delay-3">
+          <h3 class="membership-name">Platinum Sanctuary</h3>
+          <div class="membership-price">₹14,999 <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 400;">/ month</span></div>
+          <ul class="membership-features">
+            <li><i class="fa-solid fa-check text-gold"></i> Unlimited Access to Spa Suites & Jacuzzi</li>
+            <li><i class="fa-solid fa-check text-gold"></i> 30% off all bridal & family packages</li>
+            <li><i class="fa-solid fa-check text-gold"></i> Dedicated Concierge Desk & Art Director</li>
+          </ul>
+          <a href="booking.html?plan=platinum" class="btn btn-outline" style="width: 100%;">Join Platinum Sanctuary</a>
         </div>
-  <!-- 4.5 Interactive Before & After Transformation Slider -->
-  <section class="section section-dark">
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Interactive Before / After Drag Slider -->
+  <section class="section section-light">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag" style="color: var(--accent-gold);">REAL CLIENT TRANSFORMATIONS</span>
-        <h2 class="section-title" style="color: #FFFFFF;">
-          <span class="line-mask-wrap"><span class="line-mask-text">Interactive Before & After</span></span>
-        </h2>
-        <p class="section-subtitle" style="color: var(--text-light-muted);">Drag the gold slider handle left or right to compare natural hair base vs finished French Caramel Balayage.</p>
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">PROVEN TRANSFORMATIONS</span>
+        <h2 class="section-title">Interactive Before & After Results</h2>
+        <p class="section-subtitle">Drag the gold slider bar left or right to compare natural dark hair bases against finished French Caramel Balayage.</p>
       </div>
 
       <div class="ba-slider-container reveal reveal-delay-1">
         <div class="ba-image ba-before-img">
-          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=80" alt="Natural Dark Hair Base Before Balayage">
-          <span class="ba-label ba-label-before">Before (Natural Base)</span>
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=80" alt="Natural Dark Hair Base Before Color">
+          <span class="ba-label ba-label-before">Before (Natural Level 2 Base)</span>
         </div>
         <div class="ba-image ba-after-img">
-          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80" alt="French Caramel Balayage Transformation After">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80" alt="French Caramel Balayage Finish After">
           <span class="ba-label ba-label-after">After Balayage Finish</span>
         </div>
         <div class="ba-handle">
@@ -314,136 +519,138 @@
     </div>
   </section>
 
-  <!-- 5. Why Choose AURA & GOLD (Trust Indicators) -->
+  <!-- 10. Visual Masonry Gallery Preview -->
   <section class="section section-warm">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">THE AURA STANDARD</span>
-        <h2 class="section-title">
-          <span class="line-mask-wrap"><span class="line-mask-text">Why Discerning Clients Trust Us</span></span>
-        </h2>
-        <p class="section-subtitle">We prioritize professional standards, client comfort, and clinical hygiene across every outlet.</p>
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">VISUAL ARCHITECTURE</span>
+        <h2 class="section-title">Sanctuary Portfolio</h2>
       </div>
 
-      <div class="grid-4">
-        <div class="card reveal reveal-delay-1" style="padding: 2rem; text-align: center; border-color: var(--border-color);">
-          <div style="width: 54px; height: 54px; border-radius: 50%; background-color: var(--accent-gold-light); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin: 0 auto 1.25rem auto;"><i class="fa-solid fa-user-graduate"></i></div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Certified Art Directors</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Senior stylists trained at London & Paris academies with minimum 8+ years experience.</p>
+      <div class="grid-3">
+        <div class="gallery-item card reveal reveal-delay-1" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Bandra West Sanctuary Interior">
+          </div>
         </div>
-
-        <div class="card reveal reveal-delay-2" style="padding: 2rem; text-align: center; border-color: var(--border-color);">
-          <div style="width: 54px; height: 54px; border-radius: 50%; background-color: var(--accent-gold-light); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin: 0 auto 1.25rem auto;"><i class="fa-solid fa-bottle-droplet"></i></div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Authentic Products</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Authentic Kérastase, Olaplex No.3 & No.7, L'Oréal Professionnel, and Forest Essentials.</p>
+        <div class="gallery-item card reveal reveal-delay-2" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="24K Saffron Facial Suite">
+          </div>
         </div>
-
-        <div class="card reveal reveal-delay-3" style="padding: 2rem; text-align: center; border-color: var(--border-color);">
-          <div style="width: 54px; height: 54px; border-radius: 50%; background-color: var(--accent-gold-light); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin: 0 auto 1.25rem auto;"><i class="fa-solid fa-pump-soap"></i></div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Autoclave Hygiene</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Hospital-grade UV autoclave tool sterilization and single-use client linen capes.</p>
+        <div class="gallery-item card reveal reveal-delay-3" style="cursor: pointer;">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 75%;">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Kerala Abhyanga Spa Room">
+          </div>
         </div>
-
-        <div class="card reveal reveal-delay-4" style="padding: 2rem; text-align: center; border-color: var(--border-color);">
-          <div style="width: 54px; height: 54px; border-radius: 50%; background-color: var(--accent-gold-light); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin: 0 auto 1.25rem auto;"><i class="fa-solid fa-door-closed"></i></div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">Private Treatment Suites</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Dedicated soundproof rooms for skin consultation, couple spas, and bridal parties.</p>
-        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="gallery.html" class="btn btn-outline">Explore Full Gallery</a>
       </div>
     </div>
   </section>
 
-  <!-- 6. Salon Experience Customer Journey -->
+  <!-- 11. "THE WELLNESS JOURNAL" Blog Grid -->
   <section class="section section-light">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">OUR METHODOLOGY</span>
-        <h2 class="section-title">
-          <span class="line-mask-wrap"><span class="line-mask-text">The Four-Step Service Journey</span></span>
-        </h2>
-        <p class="section-subtitle">From your first step into our salon to long-term post-treatment care.</p>
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">EXPERT INSIGHTS</span>
+        <h2 class="section-title">The Wellness Journal</h2>
+        <p class="section-subtitle">Articles on hair health, scalp diagnostics, Ayurvedic oil therapies, and pre-bridal skin care.</p>
       </div>
 
-      <div class="grid-4">
-        <div class="reveal reveal-delay-1" style="background-color: var(--bg-main); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-md);">
-          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.5rem;">01</span>
-          <h3 style="font-size: 1.2rem; font-family: var(--font-serif); margin-bottom: 0.5rem;">Consultation</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">In-depth scalp/skin evaluation using micro-cameras to assess hair porosity and skin elasticity.</p>
+      <div class="grid-3">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="How Often Should You Get a Massage">
+          </div>
+          <div class="card-body">
+            <span class="card-category">WELLNESS & MASSAGE</span>
+            <h3 class="card-title">How Often Should You Get an Abhyanga Massage?</h3>
+            <p class="card-desc">Understanding the muscular and lymphatic benefits of bi-weekly warm herbal oil therapy.</p>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Article</a>
+          </div>
         </div>
 
-        <div class="reveal reveal-delay-2" style="background-color: var(--bg-main); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-md);">
-          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.5rem;">02</span>
-          <h3 style="font-size: 1.2rem; font-family: var(--font-serif); margin-bottom: 0.5rem;">Custom Formula</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Tailored color mixology or herbal oil infusion matched strictly to your target tone and sensitivity.</p>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" alt="Choosing the Right Facial">
+          </div>
+          <div class="card-body">
+            <span class="card-category">CLINICAL SKINCARE</span>
+            <h3 class="card-title">24K Gold vs Hydra-Dermabrasion: Which Facial is Best?</h3>
+            <p class="card-desc">A comparative guide for treating sun tan, hyperpigmentation, and dehydration in Indian skin.</p>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Article</a>
+          </div>
         </div>
 
-        <div class="reveal reveal-delay-3" style="background-color: var(--bg-main); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-md);">
-          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.5rem;">03</span>
-          <h3 style="font-size: 1.2rem; font-family: var(--font-serif); margin-bottom: 0.5rem;">Expert Treatment</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Application by certified specialists in private climate-controlled rooms with complimentary beverages.</p>
-        </div>
-
-        <div class="reveal reveal-delay-4" style="background-color: var(--bg-main); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-md);">
-          <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--accent-gold); display: block; margin-bottom: 0.5rem;">04</span>
-          <h3 style="font-size: 1.2rem; font-family: var(--font-serif); margin-bottom: 0.5rem;">Home Aftercare</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary);">Personalized regimen guide and prescription products to maintain salon-fresh results for months.</p>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-img-wrap img-clip-sweep">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80" alt="Balayage Aftercare Guide">
+          </div>
+          <div class="card-body">
+            <span class="card-category">HAIR CARE</span>
+            <h3 class="card-title">Maintaining French Balayage on Dark Indian Hair</h3>
+            <p class="card-desc">Sulfate-free shampoos, toner glosses, and heat protection routines to prevent brassiness.</p>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Article</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. Flagship Outlets & Interactive Map Section -->
+  <!-- 12. Interactive Outlets & Leaflet Map -->
   <section class="section section-warm">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">LOCATIONS</span>
-        <h2 class="section-title">Visit Our Flagship Sanctuaries</h2>
-        <p class="section-subtitle">Select an outlet below to view address, operating hours, and live map directions.</p>
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">METRO SANCTUARIES</span>
+        <h2 class="section-title">Visit Our Flagship Outlets</h2>
+        <p class="section-subtitle">Select an outlet below to focus the interactive map and view address details.</p>
       </div>
 
       <div class="outlets-grid">
         <div class="outlets-selector">
           <div class="outlet-tab active" data-outlet="mumbai">
             <h3 class="outlet-title">Mumbai — Bandra West</h3>
-            <p class="outlet-address">Waterfield Road, Bandra West, Mumbai 400050</p>
-            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43210 • Open Daily 9 AM - 9 PM</span>
+            <p class="outlet-address">Waterfield Road, Bandra West, Mumbai, Maharashtra 400050</p>
+            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
           </div>
 
           <div class="outlet-tab" data-outlet="delhi">
             <h3 class="outlet-title">New Delhi — Connaught Place</h3>
             <p class="outlet-address">Block M, Outer Circle, Connaught Place, New Delhi 110001</p>
-            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43211 • Open Daily 9:30 AM - 9 PM</span>
+            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43211</span>
           </div>
 
           <div class="outlet-tab" data-outlet="bengaluru">
             <h3 class="outlet-title">Bengaluru — Indiranagar</h3>
             <p class="outlet-address">100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038</p>
-            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43212 • Open Daily 9 AM - 9 PM</span>
+            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43212</span>
           </div>
 
           <div class="outlet-tab" data-outlet="hyderabad">
             <h3 class="outlet-title">Hyderabad — Jubilee Hills</h3>
             <p class="outlet-address">Road No. 36, Opposite Metro Pillar 165, Jubilee Hills 500033</p>
-            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43213 • Open Daily 9:30 AM - 9 PM</span>
+            <span class="outlet-meta"><i class="fa-solid fa-phone"></i> +91 98765 43213</span>
           </div>
         </div>
 
         <div>
-          <div id="leafletMap"></div>
+          <div id="leafletMap" style="height: 380px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 8. Final CTA Section -->
-  <section class="section section-dark" style="text-align: center; padding: 5rem 0;">
-    <div class="container" style="max-width: 720px;">
-      <span class="section-tag" style="color: var(--accent-gold);">RESERVE YOUR APPOINTMENT</span>
-      <h2 class="section-title" style="color: #FFFFFF; font-size: 2.8rem;">Your Signature Beauty Experience Starts Here</h2>
-      <p style="color: var(--text-light-muted); font-size: 1.05rem; margin-bottom: 2.25rem; line-height: 1.7;">Book online in under 2 minutes. Receive instant confirmation and enjoy complimentary valet parking with every visit.</p>
+  <!-- 13. Dramatic Closing CTA Banner -->
+  <section class="section section-dark" style="position: relative; overflow: hidden; padding: 7.5rem 0; text-align: center;">
+    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1800&q=80" alt="Make Time For Yourself Closing Banner" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; filter: brightness(0.5);">
+    <div class="container" style="position: relative; z-index: 2; max-width: 680px;">
+      <h2 style="font-family: var(--font-serif); font-size: 3.5rem; color: #FFFFFF; margin-bottom: 0.85rem;">Make Time For Yourself.</h2>
+      <p style="color: var(--text-light-muted); font-size: 1.1rem; margin-bottom: 2.25rem;">Your next moment of calm is only an appointment away.</p>
       <div style="display: flex; gap: 1rem; justify-content: center;">
-        <a href="booking.html" class="btn btn-gold btn-lg">Book Online Appointment</a>
-        <a href="contact.html" class="btn btn-outline btn-lg" style="color: #FFF; border-color: rgba(255,255,255,0.3);">Contact Outlets</a>
+        <a href="booking.html" class="btn btn-bronze btn-lg">Book Your Experience</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Sanctuary</a>
       </div>
     </div>
   </section>
@@ -457,47 +664,37 @@
             <div class="logo-badge">AG</div>
             <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
           </div>
-          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
-          <div class="social-links">
-            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+          <p>India's premier luxury salon and wellness spa sanctuary. Delivering master hair color artistry, clinical skincare, and Ayurvedic body therapies.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Explore</h4>
           <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services Menu</a>
-            <a href="stylists.html">Master Stylists</a>
-            <a href="packages.html">Curated Packages</a>
-            <a href="offers.html">Promotions</a>
+            <a href="packages.html">Membership</a>
             <a href="gallery.html">Visual Gallery</a>
+            <a href="blog.html">Wellness Journal</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Specialties</h4>
+          <h4>Treatments</h4>
           <div class="footer-links">
-            <a href="hair-services.html">Balayage & Color</a>
-            <a href="hair-services.html">Keratin Smoothening</a>
-            <a href="beauty-skin.html">24K Saffron Facial</a>
-            <a href="beauty-skin.html">Hydra-Dermabrasion</a>
+            <a href="hair-services.html">Hair Studio</a>
+            <a href="beauty-skin.html">Skincare & Facials</a>
             <a href="spa-wellness.html">Ayurvedic Spa</a>
-            <a href="bridal-makeup.html">HD Bridal Makeup</a>
+            <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Outlets</h4>
+          <h4>Contact</h4>
           <div class="footer-links">
-            <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-bottom: 0.5rem;"><strong>Mumbai:</strong> Bandra West</p>
-            <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-bottom: 0.5rem;"><strong>Delhi NCR:</strong> Connaught Place</p>
-            <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-bottom: 0.5rem;"><strong>Bengaluru:</strong> Indiranagar</p>
-            <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-bottom: 0.5rem;"><strong>Hyderabad:</strong> Jubilee Hills</p>
-            <p style="font-size: 0.88rem; color: var(--accent-gold); margin-top: 0.75rem;"><i class="fa-solid fa-envelope"></i> concierge@auragold.in</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Concierge: +91 98765 43210</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted);">Email: concierge@auragold.in</p>
+            <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-top: 0.5rem;">Mumbai • Delhi • Bengaluru • Hyderabad</p>
           </div>
         </div>
       </div>
@@ -505,17 +702,17 @@
       <div class="footer-bottom">
         <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
         <div style="display: flex; gap: 1.5rem;">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Sanitization Protocols</a>
+          <a href="#" style="color: var(--text-light-muted);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-light-muted);">Terms of Service</a>
+          <a href="#" style="color: var(--text-light-muted);">Cancellation Policy</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>

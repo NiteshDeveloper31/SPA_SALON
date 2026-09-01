@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Master Stylists & Experts — AURA & GOLD Salon</title>
-  <meta name="description" content="Meet our team of internationally certified Indian hair directors, HD bridal makeup artists, skin specialists, and master barbers.">
+  <meta name="description" content="Meet our team of 5 internationally certified Indian hair directors, HD bridal makeup artists, skin specialists, master barbers, and Ayurvedic vaidyas.">
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- Header Navigation -->
+  <!-- Global Header Navigation -->
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -37,21 +37,21 @@
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
-        <a href="stylists.html" class="nav-link active">Stylists</a>
-        <a href="packages.html" class="nav-link">Packages</a>
-        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="packages.html" class="nav-link">Membership</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link">Journal</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="booking.html" class="btn btn-gold btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+        <button class="icon-btn search-trigger" aria-label="Search Treatments"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="booking.html" class="btn btn-bronze btn-sm"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
         <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer">
     <div>
       <div class="drawer-header">
@@ -65,14 +65,24 @@
         <a href="index.html" class="drawer-link">Home</a>
         <a href="about.html" class="drawer-link">About Us</a>
         <a href="services.html" class="drawer-link">All Services Menu</a>
-        <a href="stylists.html" class="drawer-link active">Our Master Stylists</a>
-        <a href="packages.html" class="drawer-link">Curated Packages</a>
+        <a href="packages.html" class="drawer-link">Wellness Membership</a>
+        <a href="gallery.html" class="drawer-link">Visual Gallery</a>
+        <a href="blog.html" class="drawer-link">Wellness Journal</a>
         <a href="contact.html" class="drawer-link">Contact & Outlets</a>
       </div>
     </div>
-    <a href="booking.html" class="btn btn-gold" style="width: 100%;">Book Appointment</a>
+    <a href="booking.html" class="btn btn-bronze" style="width: 100%;">Book Appointment</a>
   </div>
   <div class="backdrop-overlay"></div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal" id="searchModal">
+    <button class="search-close" id="searchClose" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+    <div class="search-box-wrap">
+      <span class="eyebrow">EXPLORE OUR SANCTUARY</span>
+      <input type="text" class="search-input" placeholder="Search treatments, balayage, facials, spa...">
+    </div>
+  </div>
 
   <!-- Page Hero -->
   <section class="page-hero">
@@ -83,61 +93,95 @@
       <h1 class="page-hero-title">
         <span class="line-mask-wrap"><span class="line-mask-text">Meet Our Creative Art Directors</span></span>
       </h1>
-      <p class="page-hero-desc">Internationally certified hair directors, HD bridal makeup artists, dermal therapists, and barber masters across our metro sanctuaries.</p>
+      <p class="page-hero-desc">Internationally certified hair directors, HD bridal makeup artists, dermal therapists, and Ayurvedic vaidyas across our flagship sanctuaries.</p>
     </div>
   </section>
 
-  <!-- Stylists Grid -->
+  <!-- Stylists Grid Section -->
   <section class="section section-light">
     <div class="container">
       <div class="grid-3">
-        <!-- Stylist 1 -->
+        <!-- 1. Rohan Kapoor — Creative Hair Director -->
         <div class="card reveal reveal-delay-1">
           <div class="card-img-wrap img-clip-sweep" style="padding-top: 100%;">
-            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80" alt="Ananya Sharma - Master Hair Stylist">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Rohan Kapoor - Creative Hair Director" style="object-fit: cover; object-position: center top;">
           </div>
           <div class="card-body">
             <span class="card-category">CREATIVE HAIR DIRECTOR</span>
-            <h3 class="card-title">Ananya Sharma</h3>
-            <p style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0.5rem;">12+ Years Experience | London Academy Certified</p>
-            <p class="card-desc">Specializes in French Balayage, corrective color transformations, and organic keratin smoothening.</p>
+            <h3 class="card-title">Rohan Kapoor</h3>
+            <p style="font-size: 0.85rem; color: var(--accent-bronze); font-weight: 600; margin-bottom: 0.5rem;">14+ Years Experience | Paris Academy Trained</p>
+            <p class="card-desc">Specializes in French Caramel Balayage, precision couture cuts, and Olaplex bond reconstruction for dark hair bases.</p>
             <div class="card-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Bandra, Mumbai</span>
-              <a href="booking.html?stylist=ananya" class="btn btn-gold btn-sm">Book with Ananya</a>
+              <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Bandra, Mumbai</span>
+              <a href="booking.html?stylist=rohan" class="btn btn-bronze btn-sm">Book Session</a>
             </div>
           </div>
         </div>
 
-        <!-- Stylist 2 -->
+        <!-- 2. Priya Nair — Chief Bridal Artist -->
         <div class="card reveal reveal-delay-2">
           <div class="card-img-wrap img-clip-sweep" style="padding-top: 100%;">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Priya Nair - Chief Bridal Artist">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Priya Nair - Chief Bridal Artist" style="object-fit: cover; object-position: center top;">
           </div>
           <div class="card-body">
             <span class="card-category">CHIEF BRIDAL ARTIST</span>
             <h3 class="card-title">Priya Nair</h3>
-            <p style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0.5rem;">10+ Years Experience | HD Airbrush Specialist</p>
-            <p class="card-desc">Crafted makeup looks for over 1,500 North & South Indian brides across Mumbai, Delhi, and Bengaluru.</p>
+            <p style="font-size: 0.85rem; color: var(--accent-bronze); font-weight: 600; margin-bottom: 0.5rem;">12+ Years Experience | HD 4K Airbrush Expert</p>
+            <p class="card-desc">Crafted makeup looks for over 1,500 North & South Indian brides across Mumbai, Delhi NCR, and Dubai.</p>
             <div class="card-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Connaught Place</span>
-              <a href="booking.html?stylist=priya" class="btn btn-gold btn-sm">Book with Priya</a>
+              <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Connaught Place</span>
+              <a href="booking.html?stylist=priya" class="btn btn-bronze btn-sm">Book Session</a>
             </div>
           </div>
         </div>
 
-        <!-- Stylist 3 -->
+        <!-- 3. Vikramaditya Rathore — Master Barber -->
         <div class="card reveal reveal-delay-3">
           <div class="card-img-wrap img-clip-sweep" style="padding-top: 100%;">
-            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Vikramaditya Rathore - Master Barber">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Vikramaditya Rathore - Master Barber" style="object-fit: cover; object-position: center top;">
           </div>
           <div class="card-body">
-            <span class="card-category">GROOM & BARBER MASTER</span>
+            <span class="card-category">MAHARAJAH GROOM MASTER</span>
             <h3 class="card-title">Vikramaditya Rathore</h3>
-            <p style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0.5rem;">9+ Years Experience | Royal Grooming Master</p>
-            <p class="card-desc">Expert in sharp beard sculpting, traditional razor shaves, and Maharajah groom styling sessions.</p>
+            <p style="font-size: 0.85rem; color: var(--accent-bronze); font-weight: 600; margin-bottom: 0.5rem;">10+ Years Experience | Royal Groom Specialist</p>
+            <p class="card-desc">Expert in sharp beard sculpting, hot towel razor shaves, and Maharajah pre-wedding groom styling sessions.</p>
             <div class="card-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Jubilee Hills</span>
-              <a href="booking.html?stylist=vikram" class="btn btn-gold btn-sm">Book with Vikram</a>
+              <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Jubilee Hills</span>
+              <a href="booking.html?stylist=vikram" class="btn btn-bronze btn-sm">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Dr. Ananya Sharma — Dermal Therapy Director -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 100%;">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Dr. Ananya Sharma - Dermal Therapy Director" style="object-fit: cover; object-position: center top;">
+          </div>
+          <div class="card-body">
+            <span class="card-category">DERMAL THERAPY DIRECTOR</span>
+            <h3 class="card-title">Dr. Ananya Sharma</h3>
+            <p style="font-size: 0.85rem; color: var(--accent-bronze); font-weight: 600; margin-bottom: 0.5rem;">11+ Years Experience | Clinical Derm Specialist</p>
+            <p class="card-desc">Specializes in 24K Kashmiri saffron gold leaf facials, hydra-dermabrasion, and hyperpigmentation therapy.</p>
+            <div class="card-footer">
+              <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Indiranagar</span>
+              <a href="booking.html?stylist=ananya" class="btn btn-bronze btn-sm">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Dr. Devendra Varma — Lead Ayurvedic Spa Vaidya -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card-img-wrap img-clip-sweep" style="padding-top: 100%;">
+            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80" alt="Dr. Devendra Varma - Lead Ayurvedic Spa Vaidya" style="object-fit: cover; object-position: center top;">
+          </div>
+          <div class="card-body">
+            <span class="card-category">AYURVEDIC SPA VAIDYA</span>
+            <h3 class="card-title">Dr. Devendra Varma</h3>
+            <p style="font-size: 0.85rem; color: var(--accent-bronze); font-weight: 600; margin-bottom: 0.5rem;">16+ Years Experience | Kerala Institute Certified</p>
+            <p class="card-desc">Master of warm herbal Dhanwantharam oil Abhyanga massage therapies and soundproof jacuzzi suite relaxation.</p>
+            <div class="card-footer">
+              <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Bandra, Mumbai</span>
+              <a href="booking.html?stylist=devendra" class="btn btn-bronze btn-sm">Book Session</a>
             </div>
           </div>
         </div>
@@ -154,28 +198,31 @@
             <div class="logo-badge">AG</div>
             <span class="logo-title" style="color: #FFFFFF;">AURA & GOLD</span>
           </div>
-          <p>India's premier modern salon and wellness spa brand. Delivering master hair coloring, clinical skincare, and Indian bridal makeup across flagship sanctuaries.</p>
+          <p>India's premier luxury salon and wellness spa sanctuary. Delivering master hair color artistry, clinical skincare, and Ayurvedic body therapies.</p>
         </div>
+
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Explore</h4>
           <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services Menu</a>
-            <a href="stylists.html">Master Stylists</a>
-            <a href="packages.html">Packages</a>
-            <a href="contact.html">Contact</a>
+            <a href="packages.html">Membership</a>
+            <a href="gallery.html">Visual Gallery</a>
+            <a href="blog.html">Wellness Journal</a>
           </div>
         </div>
+
         <div class="footer-col">
-          <h4>Specialties</h4>
+          <h4>Treatments</h4>
           <div class="footer-links">
             <a href="hair-services.html">Hair Studio</a>
-            <a href="beauty-skin.html">Skincare</a>
+            <a href="beauty-skin.html">Skincare & Facials</a>
             <a href="spa-wellness.html">Ayurvedic Spa</a>
             <a href="bridal-makeup.html">Bridal Studio</a>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Contact</h4>
           <div class="footer-links">
@@ -184,6 +231,7 @@
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 AURA & GOLD Luxury Salons Pvt. Ltd. All Rights Reserved.</p>
       </div>
